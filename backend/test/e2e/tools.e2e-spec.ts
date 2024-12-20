@@ -41,7 +41,6 @@ describe('Tools Management (e2e)', () => {
       expect(response.body).toHaveProperty('id');
       expect(response.body.title).toBe(createToolDto.title);
       expect(response.body.description).toBe(createToolDto.description);
-      expect(response.body.postcode).toBe(testUser.postcode);
       expect(response.body.ownerId).toBe(testUser.id);
 
       createdToolId = response.body.id;
@@ -82,7 +81,6 @@ describe('Tools Management (e2e)', () => {
       expect(response.body).toHaveProperty('id', createdToolId);
       expect(response.body.title).toBe(updateToolDto.title);
       expect(response.body.description).toBe(updateToolDto.description);
-      expect(response.body.postcode).toBe(testUser.postcode);
     });
   });
 

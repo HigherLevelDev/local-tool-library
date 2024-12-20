@@ -1,0 +1,24 @@
+{
+  "spec": "update the tools service and repo to reflect the fact that the tool should not have a postcode property... that can be gotten whenever needed by joining to the users table.",
+  "commitMessage": "Remove postcode from tools table and related code\n\n- Added migration to remove postcode column from tools table\n- Updated Tool entity to remove postcode property\n- Updated ToolRepository to remove postcode from queries\n- Updated ToolsService to remove postcode handling\n- Updated e2e tests to remove postcode expectations\n\nThe postcode can now be retrieved by joining with the users table when needed.",
+  "stats": {
+    "inputTokens": 107791,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 196821,
+    "outputTokens": 3545,
+    "totalTokens": null,
+    "cost": 0.326695725,
+    "currency": "gbp",
+    "processingMillis": 108040,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 13,
+      "deletions": 9,
+      "linesChanged": 13,
+      "testFilesChanged": 1,
+      "testInsertions": 0,
+      "testDeletions": 2,
+      "testLinesChanged": 2
+    }
+  }
+}

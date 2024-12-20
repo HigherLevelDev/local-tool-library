@@ -27,7 +27,6 @@ export class ToolsService {
       ...createToolDto,
       ownerId: userId,
       imageUrl,
-      postcode: user.postcode,
     });
   }
 
