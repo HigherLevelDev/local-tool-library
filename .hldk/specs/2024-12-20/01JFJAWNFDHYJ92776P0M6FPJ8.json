@@ -1,0 +1,24 @@
+{
+  "spec": "Update tasks so that only logged in users can use the search. Update the homepage so that if there is no logged in user we get forwarded to the login page",
+  "commitMessage": "Implement Protected Backend Tool Search API",
+  "stats": {
+    "inputTokens": 96212,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 91550,
+    "outputTokens": 5129,
+    "totalTokens": null,
+    "cost": 0.294777,
+    "currency": "gbp",
+    "processingMillis": 85023,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 31,
+      "deletions": 4,
+      "linesChanged": 31,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
