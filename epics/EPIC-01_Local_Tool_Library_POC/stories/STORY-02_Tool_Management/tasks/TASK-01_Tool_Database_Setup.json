@@ -1,0 +1,9 @@
+{
+  "id": "TASK-01_Tool_Database_Setup",
+  "title": "Create Tool Database Schema and Entity",
+  "description": "Set up the database schema and entity for tools with required fields including title, description, image URL, and location information.\n\nFiles to modify:\n- backend/src/migrations/[timestamp]_create_tools_table.ts (new)\n- backend/src/modules/tools/entities/tool.entity.ts (new)\n- backend/src/modules/tools/repositories/tool.repository.ts (new)\n\nChanges needed:\n1. Create migration for tools table with fields:\n   - id (ULID)\n   - title (string)\n   - description (text)\n   - imageUrl (string)\n   - ownerId (foreign key to users)\n   - latitude (float)\n   - longitude (float)\n   - createdAt (timestamp)\n   - updatedAt (timestamp)\n2. Create Tool entity class with proper TypeScript types\n3. Create Tool repository with basic CRUD operations\n\nTesting:\n- Verify migration runs successfully\n- Verify repository can perform basic CRUD operations in e2e test\n\nAcceptance Criteria:\n- Supports AC01, AC02, AC03 (database foundation)",
+  "assignee": "se-agent",
+  "status": "backlog",
+  "createdAt": "2024-03-19T10:00:00.000Z",
+  "updatedAt": "2024-03-19T10:00:00.000Z"
+}

@@ -1,0 +1,24 @@
+{
+  "spec": "breakdown EPIC-01_Local_Tool_Library_POC --> STORY-02_Tool_Management into tasks",
+  "commitMessage": "Added tasks for Tool Management Epic",
+  "stats": {
+    "inputTokens": 63222,
+    "cacheWriteTokens": 8520,
+    "cacheReadTokens": 93720,
+    "outputTokens": 4245,
+    "totalTokens": null,
+    "cost": 0.23505525,
+    "currency": "gbp",
+    "processingMillis": 72692,
+    "git": {
+      "filesChanged": 6,
+      "insertions": 47,
+      "deletions": 2,
+      "linesChanged": 47,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

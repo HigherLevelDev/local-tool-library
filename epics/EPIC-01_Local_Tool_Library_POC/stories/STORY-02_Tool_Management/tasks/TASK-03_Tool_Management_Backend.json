@@ -1,0 +1,9 @@
+{
+  "id": "TASK-03_Tool_Management_Backend",
+  "title": "Implement Tool Management API Endpoints",
+  "description": "Create the backend API endpoints for tool management operations.\n\nFiles to modify:\n- backend/src/modules/tools/tools.module.ts (new)\n- backend/src/modules/tools/tools.controller.ts (new)\n- backend/src/modules/tools/tools.service.ts (new)\n- backend/src/modules/tools/dto/create-tool.dto.ts (new)\n- backend/src/modules/tools/dto/update-tool.dto.ts (new)\n\nChanges needed:\n1. Create DTOs for tool creation and updates\n2. Implement service methods for:\n   - Creating tools (with image search)\n   - Updating tools\n   - Deleting tools\n   - Listing user's tools\n3. Create controller endpoints:\n   - POST /api/tools\n   - PUT /api/tools/:id\n   - DELETE /api/tools/:id\n   - GET /api/tools/my-tools\n4. Add proper validation and error handling\n\nTesting:\n- Test all CRUD operations via e2e tests\n- Verify owner-only access to update/delete\n- Test validation error cases\n\nAcceptance Criteria:\n- Supports AC01, AC03 (tool creation)\n- Supports AC04 (listing tools)\n- Supports AC05 (editing tools)\n- Supports AC06 (deleting tools)",
+  "assignee": "se-agent",
+  "status": "backlog",
+  "createdAt": "2024-03-19T10:00:00.000Z",
+  "updatedAt": "2024-03-19T10:00:00.000Z"
+}
