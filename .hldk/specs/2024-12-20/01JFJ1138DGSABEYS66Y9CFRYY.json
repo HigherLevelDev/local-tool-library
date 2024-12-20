@@ -1,0 +1,24 @@
+{
+  "spec": "2react-router-dom.js?v=eba30027:215 No routes matched location \"/auth/signup\" \nwarning @ react-router-dom.js?v=eba30027:215Understand this warningAI\nchunk-Z4APPW6Q.js?v=9014e6a5:14052 The above error occurred in the <ErrorPage> component:\n\n    at ErrorPage (http://localhost:5001/src/components/error-page/index.tsx:22:17)\n    at RenderErrorBoundary (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=eba30027:4044:5)\n    at DataRoutes (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=eba30027:5239:5)\n    at Router (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=eba30027:4498:15)\n    at RouterProvider (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=eba30027:5053:5)\n    at AuthProvider (http://localhost:5001/src/lib/auth.context.tsx:21:3)\n    at QueryClientProvider (http://localhost:5001/node_modules/.vite/deps/chunk-T7YKUEBR.js?v=9014e6a5:2789:3)\n    at App (http://localhost:5001/src/App.tsx:26:23)\n\nConsider adding an error boundary to your tree to customize error handling behavior.\nVisit https://reactjs.org/link/error-boundaries to learn more about error boundaries.\nlogCapturedError @ chunk-Z4APPW6Q.js?v=9014e6a5:14052Understand this errorAI\nchunk-Z4APPW6Q.js?v=9014e6a5:9145 Uncaught Error: A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition.\n    at throwException (chunk-Z4APPW6Q.js?v=9014e6a5:14233:43)\n    at handleError (chunk-Z4APPW6Q.js?v=9014e6a5:19062:15)\n    at renderRootSync (chunk-Z4APPW6Q.js?v=9014e6a5:19147:15)\n    at recoverFromConcurrentError (chunk-Z4APPW6Q.js?v=9014e6a5:18764:28)\n    at performSyncWorkOnRoot (chunk-Z4APPW6Q.js?v=9014e6a5:18907:28)\n    at flushSyncCallbacks (chunk-Z4APPW6Q.js?v=9014e6a5:9135:30)\n    at chunk-Z4APPW6Q.js?v=9014e6a5:18655:21Understand this errorAI\ni18next.js?v=0df8603d:215 i18next::backendConnector: loaded namespace notfound for language en Object",
+  "commitMessage": "fix: add /auth/* routes to support both URL patterns for login and signup",
+  "stats": {
+    "inputTokens": 9537,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 49165,
+    "outputTokens": 836,
+    "totalTokens": null,
+    "cost": 0.041925375,
+    "currency": "gbp",
+    "processingMillis": 36217,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 8,
+      "deletions": 0,
+      "linesChanged": 8,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

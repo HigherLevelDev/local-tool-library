@@ -45,7 +45,15 @@ export const routerObjects: RouteObject[] = [
     element: getDefaultLayout(<PublicOnlyRoute><LoginPage /></PublicOnlyRoute>),
   },
   {
+    path: '/auth/login',
+    element: getDefaultLayout(<PublicOnlyRoute><LoginPage /></PublicOnlyRoute>),
+  },
+  {
     path: '/signup',
+    element: getDefaultLayout(<PublicOnlyRoute><SignupPage /></PublicOnlyRoute>),
+  },
+  {
+    path: '/auth/signup',
     element: getDefaultLayout(<PublicOnlyRoute><SignupPage /></PublicOnlyRoute>),
   },
 ]
