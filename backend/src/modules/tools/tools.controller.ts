@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Put, Delete, Body, Param, UseGuards, Request } from '@nestjs/common';
+import { Controller, Get, Post, Put, Delete, Body, Param, UseGuards, Request, Query } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { ToolsService } from './tools.service';
@@ -43,6 +43,18 @@ export class ToolsController {
   @ApiResponse({ status: 200, description: 'List of user\'s tools', type: [Tool] })
   async getMyTools(@Request() req): Promise<Tool[]> {
     return this.toolsService.getUserTools(req.user.id);
+  }
+
+  @Get('search')
+  @ApiOperation({ summary: 'Search for tools' })
+  @ApiResponse({ status: 200, description: 'List of tools matching search criteria', type: [Tool] })
+  async searchTools(
+    @Request() req,
+    @Query('q') searchTerm: string,
+    @Query('page') page: number = 1,
+    @Query('limit') limit: number = 10,
+  ) {
+    return this.toolsService.searchTools(searchTerm, page, limit);
   }
 
   @Get(':id')

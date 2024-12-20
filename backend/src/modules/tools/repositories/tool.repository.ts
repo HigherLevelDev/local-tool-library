@@ -67,4 +67,25 @@ export class ToolRepository {
       updatedAt: raw.updated_at,
     });
   }
+
+  async search(searchTerm: string, page: number = 1, limit: number = 10): Promise<{ tools: Tool[], total: number }> {
+    const offset = (page - 1) * limit;
+    
+    const query = this.db.knex('tools')
+      .where('title', 'like', `%${searchTerm}%`)
+      .orWhere('description', 'like', `%${searchTerm}%`)
+      .orderBy('title', 'asc');
+
+    const [{ count }] = await query.clone().count('* as count');
+    
+    const tools = await query
+      .offset(offset)
+      .limit(limit)
+      .select('*');
+
+    return {
+      tools: tools.map(this.mapToEntity),
+      total: Number(count)
+    };
+  }
 }

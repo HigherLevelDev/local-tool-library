@@ -3,7 +3,7 @@
   "title": "Implement Protected Backend Tool Search API",
   "description": "Add authenticated search functionality to the tools module in the backend.\n\nChanges needed:\n1. Add protected search endpoint to ToolsController\n2. Implement search logic in ToolsService\n3. Update ToolRepository to support search queries\n\nFiles to modify:\n- backend/src/modules/tools/tools.controller.ts\n- backend/src/modules/tools/tools.service.ts\n- backend/src/modules/tools/repositories/tool.repository.ts\n\nEndpoint details:\n- GET /api/tools/search?q={searchTerm}\n- Protected with JwtAuthGuard\n- Should support basic keyword search in tool title and description\n- Return paginated results sorted by relevance\n\nTesting requirements:\n- Verify search endpoint requires authentication\n- Verify search endpoint returns matching tools for authenticated users\n- Verify pagination works correctly\n- Test with basic search terms\n\nFulfills:\n- AC02: Search results display\n- AC03: Results sorted by relevance",
   "assignee": "se-agent",
-  "status": "backlog",
+  "status": "inprogress",
   "createdAt": "2024-12-20T15:24:40.901Z",
-  "updatedAt": "2024-12-20T15:24:40.901Z"
+  "updatedAt": "2024-12-20T15:29:26.871Z"
 }

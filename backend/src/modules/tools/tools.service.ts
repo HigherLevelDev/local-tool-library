@@ -84,4 +84,8 @@ export class ToolsService {
     }
     return tool;
   }
+
+  async searchTools(searchTerm: string, page: number = 1, limit: number = 10) {
+    return this.toolRepository.search(searchTerm, page, limit);
+  }
 }

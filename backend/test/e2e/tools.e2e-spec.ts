@@ -94,4 +94,46 @@ describe('Tools Management (e2e)', () => {
       expect(getResponse.status).toBe(404);
     });
   });
+
+  describe('Tool Search', () => {
+    let searchToolId: string;
+
+    beforeAll(async () => {
+      // Create a tool for search testing
+      const createToolDto = {
+        title: 'Unique Search Test Tool',
+        description: 'A special tool for testing search functionality'
+      };
+
+      const response = await client.post('/api/tools', createToolDto);
+      searchToolId = response.body.id;
+    });
+
+    afterAll(async () => {
+      // Clean up the test tool
+      await client.delete(`/api/tools/${searchToolId}`);
+    });
+
+    it('should search for tools', async () => {
+      const response = await client.get('/api/tools/search?q=Search Test');
+
+      expect(response.status).toBe(200);
+      expect(response.body).toHaveProperty('tools');
+      expect(response.body).toHaveProperty('total');
+      expect(Array.isArray(response.body.tools)).toBe(true);
+      expect(response.body.tools.length).toBeGreaterThan(0);
+      expect(response.body.tools[0]).toHaveProperty('title');
+      expect(response.body.tools[0].title).toContain('Search Test');
+    });
+
+    it('should return paginated results', async () => {
+      const response = await client.get('/api/tools/search?q=Test&page=1&limit=5');
+
+      expect(response.status).toBe(200);
+      expect(response.body).toHaveProperty('tools');
+      expect(response.body).toHaveProperty('total');
+      expect(Array.isArray(response.body.tools)).toBe(true);
+      expect(response.body.tools.length).toBeLessThanOrEqual(5);
+    });
+  });
 });
