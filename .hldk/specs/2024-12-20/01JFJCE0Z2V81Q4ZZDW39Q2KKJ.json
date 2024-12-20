@@ -1,0 +1,24 @@
+{
+  "spec": "on the search page we seem to keep hitting the API over and over... we only need to query when the search text changes",
+  "commitMessage": "Optimize tool search to prevent unnecessary API calls\n\n- Created new useToolSearch hook to manage search state and logic\n- Added query caching to prevent duplicate API calls\n- Simplified Home component by moving search logic to custom hook\n- Improved performance by preventing unnecessary re-renders",
+  "stats": {
+    "inputTokens": 12388,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 63408,
+    "outputTokens": 2112,
+    "totalTokens": null,
+    "cost": 0.0658998,
+    "currency": "gbp",
+    "processingMillis": 31148,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 45,
+      "deletions": 25,
+      "linesChanged": 45,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
