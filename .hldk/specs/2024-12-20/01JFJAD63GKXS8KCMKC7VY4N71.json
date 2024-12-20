@@ -1,0 +1,24 @@
+{
+  "spec": "[Nest] 37702  - 12/20/2024, 3:18:20 PM   ERROR [RequestLogger] [ERROR] POST /api/tools - 5ms - insert into `tools` (`created_at`, `description`, `id`, `image_url`, `owner_id`, `title`, `updated_at`) values ('2024-12-20 15:18:20.939', 'For hitting things', '01JFJABWGBEWZ1PFWRYAVTD52X', 'https://via.placeholder.com/300x300?text=Tool+Image', '01JFJ2BQ262S7QNNDP61YJ5RB1', 'Hammer', '2024-12-20 15:18:20.939') returning * - SQLITE_CONSTRAINT: NOT NULL constraint failed: tools.latitude\nError: insert into `tools` (`created_at`, `description`, `id`, `image_url`, `owner_id`, `title`, `updated_at`) values ('2024-12-20 15:18:20.939', 'For hitting things', '01JFJABWGBEWZ1PFWRYAVTD52X', 'https://via.placeholder.com/300x300?text=Tool+Image', '01JFJ2BQ262S7QNNDP61YJ5RB1', 'Hammer', '2024-12-20 15:18:20.939') returning * - SQLITE_CONSTRAINT: NOT NULL constraint failed: tools.latitude\n[Nest] 37702  - 12/20/2024, 3:18:20 PM   ERROR [ErrorFilter] Error processing request: Internal server error\nError: insert into `tools` (`created_at`, `description`, `id`, `image_url`, `owner_id`, `title`, `updated_at`) values ('2024-12-20 15:18:20.939', 'For hitting things', '01JFJABWGBEWZ1PFWRYAVTD52X', 'https://via.placeholder.com/300x300?text=Tool+Image', '01JFJ2BQ262S7QNNDP61YJ5RB1', 'Hammer', '2024-12-20 15:18:20.939') returning * - SQLITE_CONSTRAINT: NOT NULL constraint failed: tools.latitude\n\nwe have removed all location stuff from the project but seems like there are some db issues",
+  "commitMessage": "fix: remove latitude and longitude fields from tools table\n\n- Added migration to remove latitude and longitude fields that were causing NOT NULL constraint errors\n- These fields were leftover from previous location functionality that has been removed",
+  "stats": {
+    "inputTokens": 9415,
+    "cacheWriteTokens": 10368,
+    "cacheReadTokens": 51840,
+    "outputTokens": 817,
+    "totalTokens": null,
+    "cost": 0.07119900000000001,
+    "currency": "gbp",
+    "processingMillis": 35935,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 15,
+      "deletions": 0,
+      "linesChanged": 15,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
