@@ -28,6 +28,13 @@ export interface UpdateToolDto {
   description?: string
 }
 
+export interface SearchToolsResponse {
+  items: Tool[]
+  total: number
+  page: number
+  limit: number
+}
+
 export class ToolService {
   private static getHeaders() {
     const token = AuthService.getToken()
@@ -109,6 +116,27 @@ export class ToolService {
     } catch (error) {
       if (error instanceof ToolError) throw error
       throw new ToolError('Failed to fetch tools: ' + (error instanceof Error ? error.message : 'Unknown error'))
+    }
+  }
+
+  static async searchTools(query: string, page = 1, limit = 10): Promise<SearchToolsResponse> {
+    try {
+      const response = await fetch(
+        `${env.VITE_API_URL}/api/tools/search?q=${encodeURIComponent(query)}&page=${page}&limit=${limit}`,
+        {
+          headers: this.getHeaders(),
+        }
+      )
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new ToolError(errorData.message || 'Failed to search tools', response.status)
+      }
+
+      return response.json()
+    } catch (error) {
+      if (error instanceof ToolError) throw error
+      throw new ToolError('Failed to search tools: ' + (error instanceof Error ? error.message : 'Unknown error'))
     }
   }
 

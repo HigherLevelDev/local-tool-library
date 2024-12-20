@@ -80,6 +80,11 @@
     },
     "card": {
       "location": "Location"
+    },
+    "search": {
+      "placeholder": "Search for tools...",
+      "button": "Search",
+      "noResults": "No tools found"
     }
   },
   "common": {
