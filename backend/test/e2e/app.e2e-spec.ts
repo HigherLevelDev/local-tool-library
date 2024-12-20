@@ -73,7 +73,7 @@ describe('AppController (e2e)', () => {
     // Verify can get token with password grant
     const authResponse = await client.post('/api/auth/token', {
       email: testUser.email,
-      password: 'test1234',
+      password: 'Testing1234!',
       grant_type: 'password'
     });
     expect(authResponse.status).toBe(201);
@@ -87,7 +87,7 @@ describe('AppController (e2e)', () => {
       // First login
       const authResponse = await client.post('/api/auth/token', {
         email: testUser.email,
-        password: 'test1234',
+        password: 'Testing1234!',
         grant_type: 'password'
       });
       expect(authResponse.status).toBe(201);

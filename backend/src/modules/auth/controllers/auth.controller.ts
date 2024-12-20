@@ -56,6 +56,7 @@ export class AuthController {
 
   @Public()
   @Post('token')
+  @HttpCode(HttpStatus.CREATED)
   @ApiOperation({ summary: 'Authenticate user and get access token' })
   @ApiResponse({ status: 201, description: 'Successfully authenticated' })
   @ApiResponse({ status: 401, description: 'Invalid credentials' })

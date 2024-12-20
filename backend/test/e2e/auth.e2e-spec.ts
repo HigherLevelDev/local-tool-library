@@ -82,7 +82,7 @@ describe('Authentication (e2e)', () => {
 
   describe('Login Flow', () => {
     const testEmail = 'logintest@example.com';
-    const testPassword = 'test1234';
+    const testPassword = 'Testing1234!';
 
     beforeAll(async () => {
       // Create a test user for login tests
@@ -137,7 +137,7 @@ describe('Authentication (e2e)', () => {
       const signupResponse = await client.post('/api/auth/signup', {
         email: 'protected@example.com',
         name: 'Protected User',
-        password: 'test1234',
+        password: 'Testing1234!',
         phone: '+1234567890',
         postcode: 'AB12CD'
       });
