@@ -38,16 +38,17 @@ export function ToolCard({ tool, onEdit, onDelete }: ToolCardProps) {
   }
 
   return (
-    <Card>
+    <Card className={getThemeClass('components.card.base')}>
       <CardHeader>
-        <CardTitle>{tool.title}</CardTitle>
+        <CardTitle className={getThemeClass('components.text.heading')}>{tool.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-gray-600">{tool.description}</p>
+        <p className={`text-sm ${getThemeClass('components.text.body')}`}>{tool.description}</p>
       </CardContent>
       <CardFooter className="flex justify-end space-x-2">
         <Button 
           onClick={() => onEdit(tool)}
+          variant="ghost"
           className={getThemeClass('components.button.link')}
         >
           {t('common.edit')}
@@ -56,22 +57,30 @@ export function ToolCard({ tool, onEdit, onDelete }: ToolCardProps) {
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <Button 
-              className="bg-red-600 text-white hover:bg-red-700" 
+              className={getThemeClass('components.button.primary')}
+              variant="destructive"
               disabled={isDeleting}
             >
               {isDeleting ? t('common.loading') : t('common.delete')}
             </Button>
           </AlertDialogTrigger>
-          <AlertDialogContent>
+          <AlertDialogContent className={getThemeClass('components.card.base')}>
             <AlertDialogHeader>
-              <AlertDialogTitle>{t('tools.delete.title')}</AlertDialogTitle>
-              <AlertDialogDescription>
+              <AlertDialogTitle className={getThemeClass('components.text.heading')}>
+                {t('tools.delete.title')}
+              </AlertDialogTitle>
+              <AlertDialogDescription className={getThemeClass('components.text.body')}>
                 {t('tools.delete.description')}
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-              <AlertDialogCancel>{t('common.cancel')}</AlertDialogCancel>
-              <AlertDialogAction onClick={handleDelete}>
+              <AlertDialogCancel className={getThemeClass('components.button.link')}>
+                {t('common.cancel')}
+              </AlertDialogCancel>
+              <AlertDialogAction 
+                onClick={handleDelete}
+                className={getThemeClass('components.button.primary')}
+              >
                 {t('common.delete')}
               </AlertDialogAction>
             </AlertDialogFooter>
