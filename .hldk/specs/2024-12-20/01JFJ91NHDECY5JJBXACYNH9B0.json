@@ -1,0 +1,24 @@
+{
+  "spec": "let's make the ui paths match the backend /tools/my --> /tools/my-tools",
+  "commitMessage": "Updated frontend routes to match backend paths:\n- Changed /tools/my to /tools/my-tools in router.tsx\n- Updated navigation in header component\n- Updated navigation in add-tool page",
+  "stats": {
+    "inputTokens": 56344,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 72513,
+    "outputTokens": 771,
+    "totalTokens": null,
+    "cost": 0.151763175,
+    "currency": "gbp",
+    "processingMillis": 21849,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 3,
+      "deletions": 3,
+      "linesChanged": 3,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

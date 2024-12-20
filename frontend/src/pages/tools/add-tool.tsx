@@ -28,7 +28,7 @@ export function AddToolPage() {
         title: t('tools.add.success'),
         description: t('tools.add.successDescription'),
       })
-      navigate('/tools/my')
+      navigate('/tools/my-tools')
     } catch (error) {
       console.error('Create tool error:', error)
       toast({

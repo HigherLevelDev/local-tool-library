@@ -65,7 +65,7 @@ export const routerObjects: RouteObject[] = [
     element: getDefaultLayout(<ProtectedRoute><AddToolPage /></ProtectedRoute>),
   },
   {
-    path: '/tools/my',
+    path: '/tools/my-tools',
     element: getDefaultLayout(<ProtectedRoute><MyToolsPage /></ProtectedRoute>),
   },
 ]
