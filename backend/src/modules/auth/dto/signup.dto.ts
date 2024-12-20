@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsString, MinLength, Matches } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, MinLength, Matches, MaxLength } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class SignupDto {
@@ -15,6 +15,8 @@ export class SignupDto {
   })
   @IsString()
   @IsNotEmpty()
+  @MinLength(2)
+  @MaxLength(100)
   name: string;
 
   @ApiProperty({
@@ -24,6 +26,10 @@ export class SignupDto {
   })
   @IsString()
   @MinLength(8)
+  @MaxLength(100)
+  @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/, {
+    message: 'Password must contain at least one uppercase letter, one lowercase letter, and one number'
+  })
   password: string;
 
   @ApiProperty({
@@ -41,6 +47,6 @@ export class SignupDto {
   })
   @IsString()
   @IsNotEmpty()
-  @Matches(/^[A-Z0-9]{2,10}$/, { message: 'Invalid postcode format' })
+  @Matches(/^[A-Z0-9]{4,10}$/, { message: 'Invalid postcode format - must be 4-10 alphanumeric characters' })
   postcode: string;
 }

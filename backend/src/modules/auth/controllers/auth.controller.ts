@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UnauthorizedException } from '@nestjs/common';
+import { Body, Controller, Post, UnauthorizedException, HttpStatus, HttpCode, UseGuards, Request, BadRequestException } from '@nestjs/common';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 import { SignupDto } from '../dto/signup.dto';
@@ -18,8 +18,10 @@ export class AuthController {
   @Post('signup')
   @ApiOperation({ summary: 'Register a new user or authenticate existing user' })
   @ApiResponse({ status: 201, description: 'User successfully registered/authenticated' })
+  @ApiResponse({ status: 400, description: 'Invalid input data' })
   @ApiResponse({ status: 401, description: 'Email already registered with different credentials' })
   async signup(@Body() signupDto: SignupDto) {
+    // Input validation is handled by ValidationPipe using class-validator decorators
     const existingUser = await this.userService.findByEmail(signupDto.email);
     if (existingUser) {
       // If user exists, try to authenticate them
@@ -62,6 +64,19 @@ export class AuthController {
         throw error;
       }
       throw new UnauthorizedException('Invalid credentials');
+    }
+  }
+
+  @Post('logout')
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({ summary: 'Logout user and invalidate token' })
+  @ApiResponse({ status: 200, description: 'Successfully logged out' })
+  async logout(@Request() req) {
+    try {
+      await this.authService.logout(req.user.id);
+      return { message: 'Successfully logged out' };
+    } catch (error) {
+      throw new UnauthorizedException('Failed to logout');
     }
   }
 }

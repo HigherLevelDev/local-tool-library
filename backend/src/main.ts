@@ -28,7 +28,7 @@ async function bootstrap() {
   // Set up global request logger interceptor
   app.useGlobalInterceptors(new RequestLoggerInterceptor(logger));
 
-  // Set up global validation pipe
+  // Set up global validation pipe with strict validation
   app.useGlobalPipes(new GlobalValidationPipe());
 
   // Set up global error filter

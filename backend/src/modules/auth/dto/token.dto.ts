@@ -1,4 +1,4 @@
-import { IsEmail, IsString, MinLength } from 'class-validator';
+import { IsEmail, IsString, MinLength, IsEnum } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class TokenDto {
@@ -22,6 +22,6 @@ export class TokenDto {
     example: 'password',
     enum: ['password']
   })
-  @IsString()
+  @IsEnum(['password'])
   grant_type: 'password';
 }

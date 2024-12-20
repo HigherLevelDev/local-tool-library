@@ -52,4 +52,16 @@ export class AuthService {
       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
     };
   }
+
+  async logout(userId: string): Promise<void> {
+    // In a real application, you might want to:
+    // 1. Add the token to a blacklist
+    // 2. Clear any refresh tokens
+    // 3. Clear any session data
+    // For now, we'll just validate the user exists
+    const user = await this.userService.findById(userId);
+    if (!user) {
+      throw new UnauthorizedException('Invalid user');
+    }
+  }
 }

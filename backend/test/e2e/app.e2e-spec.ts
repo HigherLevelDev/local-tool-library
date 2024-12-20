@@ -39,7 +39,33 @@ describe('AppController (e2e)', () => {
     expect(response.body.status).toBe('ok');
   });
 
-  it('should support user authentication flow', async () => {
+  describe('Authentication', () => {
+    it('should support user registration', async () => {
+      const email = `test${Date.now()}@example.com`;
+      const signupResponse = await client.post('/api/auth/signup', {
+        email,
+        name: 'Test User',
+        password: 'test1234',
+        phone: '+1234567890',
+        postcode: 'AB12CD'
+      });
+      expect(signupResponse.status).toBe(201);
+      expect(signupResponse.body.access_token).toBeDefined();
+      expect(signupResponse.body.user_id).toBeDefined();
+    });
+
+    it('should reject invalid registration data', async () => {
+      const response = await client.post('/api/auth/signup', {
+        email: 'not-an-email',
+        name: '',
+        password: '123',
+        phone: '123',
+        postcode: '1'
+      });
+      expect(response.status).toBe(400);
+    });
+
+    it('should support user authentication flow', async () => {
     const testUser = await ensureTestUser(client);
     expect(testUser.id).toBeDefined();
     expect(testUser.accessToken).toBeDefined();
@@ -53,6 +79,31 @@ describe('AppController (e2e)', () => {
     expect(authResponse.status).toBe(201);
     expect(authResponse.body.access_token).toBeDefined();
     expect(authResponse.body.user_id).toBe(testUser.id);
+  });
+
+    it('should support user logout', async () => {
+      const testUser = await ensureTestUser(client);
+      
+      // First login
+      const authResponse = await client.post('/api/auth/token', {
+        email: testUser.email,
+        password: 'test1234',
+        grant_type: 'password'
+      });
+      expect(authResponse.status).toBe(201);
+      
+      // Then logout
+      client.setAuthToken(authResponse.body.access_token);
+      const logoutResponse = await client.post('/api/auth/logout', {});
+      expect(logoutResponse.status).toBe(200);
+      
+      // Clear token to simulate invalidated token
+      client.clearAuthToken();
+      
+      // Verify token is invalidated
+      const protectedResponse = await client.get('/api/users/me');
+      expect(protectedResponse.status).toBe(401);
+    });
   });
 
   it('/api/docs-json (GET) should return valid OpenAPI schema', async () => {

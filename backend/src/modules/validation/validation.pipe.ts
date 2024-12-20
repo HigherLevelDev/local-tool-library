@@ -4,7 +4,14 @@ import { plainToInstance } from 'class-transformer';
 
 @Injectable()
 export class GlobalValidationPipe implements PipeTransform<any> {
+  constructor() {
+    // Enable validation of all properties by default
+    this.transform = this.transform.bind(this);
+  }
   async transform(value: any, { metatype }: ArgumentMetadata) {
+    if (!value) {
+      throw new BadRequestException('No data provided');
+    }
     if (!metatype || !this.toValidate(metatype)) {
       return value;
     }
