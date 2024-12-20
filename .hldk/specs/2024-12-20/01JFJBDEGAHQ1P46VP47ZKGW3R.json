@@ -1,0 +1,24 @@
+{
+  "spec": "implement EPIC-01_Local_Tool_Library_POC --> STORY-03_Tool_Search --> TASK-03_Search_Results_Display",
+  "commitMessage": "Implement search results display and tool details page\n\n- Created SearchResults component with grid layout and empty state handling\n- Updated ToolCard to support search result mode\n- Added tool details page with full tool information display\n- Added navigation between search results and tool details",
+  "stats": {
+    "inputTokens": 91986,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 169552,
+    "outputTokens": 5488,
+    "totalTokens": null,
+    "cost": 0.3068577,
+    "currency": "gbp",
+    "processingMillis": 102264,
+    "git": {
+      "filesChanged": 4,
+      "insertions": 199,
+      "deletions": 40,
+      "linesChanged": 199,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

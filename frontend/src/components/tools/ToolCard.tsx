@@ -20,9 +20,10 @@ interface ToolCardProps {
   tool: Tool
   onEdit: (tool: Tool) => void
   onDelete: (tool: Tool) => Promise<void>
+  isSearchResult?: boolean
 }
 
-export function ToolCard({ tool, onEdit, onDelete }: ToolCardProps) {
+export function ToolCard({ tool, onEdit, onDelete, isSearchResult }: ToolCardProps) {
   const { t } = useTranslation()
   const [isDeleting, setIsDeleting] = React.useState(false)
 
@@ -46,46 +47,58 @@ export function ToolCard({ tool, onEdit, onDelete }: ToolCardProps) {
         <p className={`text-sm ${getThemeClass('components.text.body')}`}>{tool.description}</p>
       </CardContent>
       <CardFooter className="flex justify-end space-x-2">
-        <Button 
-          onClick={() => onEdit(tool)}
-          variant="ghost"
-          className={getThemeClass('components.button.link')}
-        >
-          {t('common.edit')}
-        </Button>
-        
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
+        {!isSearchResult && (
+          <>
             <Button 
-              className={getThemeClass('components.button.primary')}
-              variant="destructive"
-              disabled={isDeleting}
+              onClick={() => onEdit(tool)}
+              variant="ghost"
+              className={getThemeClass('components.button.link')}
             >
-              {isDeleting ? t('common.loading') : t('common.delete')}
+              {t('common.edit')}
             </Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent className={getThemeClass('components.card.base')}>
-            <AlertDialogHeader>
-              <AlertDialogTitle className={getThemeClass('components.text.heading')}>
-                {t('tools.delete.title')}
-              </AlertDialogTitle>
-              <AlertDialogDescription className={getThemeClass('components.text.body')}>
-                {t('tools.delete.description')}
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel className={getThemeClass('components.button.link')}>
-                {t('common.cancel')}
-              </AlertDialogCancel>
-              <AlertDialogAction 
-                onClick={handleDelete}
-                className={getThemeClass('components.button.primary')}
-              >
-                {t('common.delete')}
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+            
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button 
+                  className={getThemeClass('components.button.primary')}
+                  variant="destructive"
+                  disabled={isDeleting}
+                >
+                  {isDeleting ? t('common.loading') : t('common.delete')}
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent className={getThemeClass('components.card.base')}>
+                <AlertDialogHeader>
+                  <AlertDialogTitle className={getThemeClass('components.text.heading')}>
+                    {t('tools.delete.title')}
+                  </AlertDialogTitle>
+                  <AlertDialogDescription className={getThemeClass('components.text.body')}>
+                    {t('tools.delete.description')}
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel className={getThemeClass('components.button.link')}>
+                    {t('common.cancel')}
+                  </AlertDialogCancel>
+                  <AlertDialogAction 
+                    onClick={handleDelete}
+                    className={getThemeClass('components.button.primary')}
+                  >
+                    {t('common.delete')}
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          </>
+        )}
+        {isSearchResult && (
+          <Button 
+            variant="ghost"
+            className={getThemeClass('components.button.link')}
+          >
+            {t('tools.viewDetails')}
+          </Button>
+        )}
       </CardFooter>
     </Card>
   )
