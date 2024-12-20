@@ -1,4 +1,7 @@
 import { RestClient } from './rest-client';
+import { INestApplication } from '@nestjs/common';
+import { DatabaseService } from '../../src/modules/database/database.service';
+import { ulid } from 'ulid';
 
 export interface TestUser {
   id: string;
@@ -64,4 +67,28 @@ export async function ensureTestUser(client: RestClient, email: string = 'test@e
     console.error('Error in ensureTestUser:', error);
     throw error;
   }
+}
+
+export async function createTestUser(app: INestApplication): Promise<TestUser> {
+  const db = app.get(DatabaseService);
+  const now = new Date();
+  const userId = ulid();
+  
+  await db.knex('users').insert({
+    id: userId,
+    email: `test-${userId}@example.com`,
+    name: 'Test User',
+    password_hash: '$2b$10$6RpJhPf.FvUAE6kRR9ATr.62h42bqLQhYS0Q5BYbVFD/0xAMY1ff2', // hash for 'test1234'
+    phone: '+1234567890',
+    postcode: 'AB12CD',
+    created_at: now,
+    updated_at: now
+  });
+
+  return {
+    id: userId,
+    email: `test-${userId}@example.com`,
+    name: 'Test User',
+    accessToken: 'test-token' // Not needed for repository tests
+  };
 }
