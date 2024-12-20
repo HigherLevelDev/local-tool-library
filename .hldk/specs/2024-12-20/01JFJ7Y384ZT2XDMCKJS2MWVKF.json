@@ -1,0 +1,24 @@
+{
+  "spec": "implement EPIC-01_Local_Tool_Library_POC --> STORY-02_Tool_Management --> TASK-05_Tool_Management_E2E_Tests",
+  "commitMessage": "Added E2E tests for tool management functionality covering create, read, update, and delete operations",
+  "stats": {
+    "inputTokens": 51837,
+    "cacheWriteTokens": 10340,
+    "cacheReadTokens": 124080,
+    "outputTokens": 2480,
+    "totalTokens": null,
+    "cost": 0.2015325,
+    "currency": "gbp",
+    "processingMillis": 73574,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 109,
+      "deletions": 2,
+      "linesChanged": 109,
+      "testFilesChanged": 1,
+      "testInsertions": 105,
+      "testDeletions": 0,
+      "testLinesChanged": 105
+    }
+  }
+}

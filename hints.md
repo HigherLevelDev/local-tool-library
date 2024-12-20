@@ -195,6 +195,8 @@
   });
   ```
 
+IMPORTANT: Only add happy path tests for now. Do not add tests for validation errors or other error cases.
+
 ### Database Development
 - The application uses Knex.js for database operations and migrations
 - Database configuration is environment-based:
