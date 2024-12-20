@@ -1,0 +1,24 @@
+{
+  "spec": "im expecting to see the search functionality on the homepage but I only see this screen",
+  "commitMessage": "feat: Show search functionality on homepage for all users\n\n- Removed authentication requirement for homepage\n- Made hero section more compact\n- Show search bar for all users",
+  "stats": {
+    "inputTokens": 20760,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 73976,
+    "outputTokens": 928,
+    "totalTokens": null,
+    "cost": 0.0737946,
+    "currency": "gbp",
+    "processingMillis": 28069,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 6,
+      "deletions": 9,
+      "linesChanged": 9,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

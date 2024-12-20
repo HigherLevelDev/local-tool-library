@@ -27,9 +27,7 @@ export function SearchBar({ onSearch }: SearchBarProps) {
     }
   }
 
-  if (!isAuthenticated) {
-    return null
-  }
+  // Show search bar for all users
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full max-w-lg gap-2">

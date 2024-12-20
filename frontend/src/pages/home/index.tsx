@@ -15,11 +15,10 @@ export default function Home() {
   const { isAuthenticated } = useAuth()
   const navigate = useNavigate()
 
+  // Only show login prompt when trying to access protected features
   useEffect(() => {
-    if (!isAuthenticated) {
-      navigate('/auth/login')
-    }
-  }, [isAuthenticated, navigate])
+    // Initial load of featured or recent tools could go here
+  }, [])
   const handleSearch = async (query: string) => {
     setIsSearching(true)
     try {
