@@ -37,5 +37,57 @@
       "registration": "Inscription réussie ! Bienvenue à la Bibliothèque d'Outils Locale.",
       "login": "Bon retour parmi nous !"
     }
+  },
+  "tools": {
+    "nav": {
+      "myTools": "Mes Outils",
+      "addTool": "Ajouter un Outil"
+    },
+    "add": {
+      "title": "Ajouter un Nouvel Outil",
+      "button": "Ajouter un Outil",
+      "success": "Outil Ajouté",
+      "successDescription": "Votre outil a été ajouté avec succès",
+      "error": "Erreur lors de l'Ajout",
+      "errorDescription": "Un problème est survenu lors de l'ajout de votre outil. Veuillez réessayer."
+    },
+    "edit": {
+      "title": "Modifier l'Outil",
+      "success": "Outil Mis à Jour",
+      "successDescription": "Votre outil a été mis à jour avec succès",
+      "error": "Erreur lors de la Mise à Jour",
+      "errorDescription": "Un problème est survenu lors de la mise à jour de votre outil. Veuillez réessayer."
+    },
+    "delete": {
+      "title": "Supprimer l'Outil",
+      "description": "Êtes-vous sûr de vouloir supprimer cet outil ? Cette action ne peut pas être annulée.",
+      "success": "Outil Supprimé",
+      "successDescription": "Votre outil a été supprimé avec succès",
+      "error": "Erreur lors de la Suppression",
+      "errorDescription": "Un problème est survenu lors de la suppression de votre outil. Veuillez réessayer."
+    },
+    "list": {
+      "title": "Mes Outils",
+      "empty": "Vous n'avez pas encore ajouté d'outils",
+      "error": "Erreur lors du Chargement",
+      "errorDescription": "Un problème est survenu lors du chargement de vos outils. Veuillez réessayer."
+    },
+    "form": {
+      "title": "Nom de l'Outil",
+      "description": "Description",
+      "latitude": "Latitude",
+      "longitude": "Longitude"
+    },
+    "card": {
+      "location": "Emplacement"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "cancel": "Annuler"
   }
 }

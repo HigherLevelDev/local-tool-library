@@ -5,6 +5,7 @@ import { useToast } from '../../hooks/use-toast'
 import { Button } from '../../components/ui/button'
 import { ToolCard } from '../../components/tools/ToolCard'
 import { ToolService, Tool } from '../../lib/tool.service'
+import { getThemeClass } from '../../lib/theme'
 
 export function MyToolsPage() {
   const { t } = useTranslation()
@@ -68,28 +69,30 @@ export function MyToolsPage() {
   }
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">{t('tools.list.title')}</h1>
-        <Button onClick={() => navigate('/tools/add')}>
-          {t('tools.add.button')}
-        </Button>
-      </div>
-
-      {tools.length === 0 ? (
-        <p className="text-gray-500">{t('tools.list.empty')}</p>
-      ) : (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {tools.map((tool) => (
-            <ToolCard
-              key={tool.id}
-              tool={tool}
-              onEdit={handleEdit}
-              onDelete={handleDelete}
-            />
-          ))}
+    <div className={getThemeClass('components.tools.container')}>
+      <div className="container mx-auto py-8">
+        <div className="flex justify-between items-center mb-6">
+          <h1 className={getThemeClass('components.tools.header')}>{t('tools.list.title')}</h1>
+          <Button onClick={() => navigate('/tools/add')}>
+            {t('tools.add.button')}
+          </Button>
         </div>
-      )}
+
+        {tools.length === 0 ? (
+          <p className={getThemeClass('components.tools.empty')}>{t('tools.list.empty')}</p>
+        ) : (
+          <div className={getThemeClass('components.tools.grid')}>
+            {tools.map((tool) => (
+              <ToolCard
+                key={tool.id}
+                tool={tool}
+                onEdit={handleEdit}
+                onDelete={handleDelete}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

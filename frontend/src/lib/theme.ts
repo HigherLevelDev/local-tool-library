@@ -36,6 +36,20 @@ export const theme = {
       heading: 'text-blue-600',
       body: 'text-blue-800',
     },
+
+    // Navigation styles
+    nav: {
+      link: 'text-blue-600 hover:text-blue-700 text-sm md:text-base',
+      active: 'text-blue-800 font-semibold',
+    },
+
+    // Tools specific styles
+    tools: {
+      container: 'min-h-screen bg-gradient-to-b from-blue-50 to-white px-4',
+      header: 'text-2xl font-bold text-blue-800 mb-6',
+      grid: 'grid gap-6 md:grid-cols-2 lg:grid-cols-3',
+      empty: 'text-blue-600 italic',
+    },
   },
 }
 

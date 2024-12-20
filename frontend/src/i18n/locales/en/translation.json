@@ -39,6 +39,10 @@
     }
   },
   "tools": {
+    "nav": {
+      "myTools": "My Tools",
+      "addTool": "Add Tool"
+    },
     "add": {
       "title": "Add New Tool",
       "button": "Add Tool",
