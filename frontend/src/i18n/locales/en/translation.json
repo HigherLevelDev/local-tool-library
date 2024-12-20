@@ -1,10 +1,10 @@
 {
-  "title": "Higher Level Frontend Starter",
+  "title": "Local Tool Library",
   "features": "Features",
-  "modernstack": "Modern and efficient stack",
-  "modernstack-desc": "Built with Vite, React, Tailwind CSS, Shadcnui, and more",
-  "i18nsupport": "i18n support out of the box",
-  "i18nsupport-desc": "Ship your product with different languages natively",
-  "hero-title": "Welcome to the Higher Level Frontend Starter",
+  "modernstack": "Community Tool Sharing",
+  "modernstack-desc": "Borrow tools from your neighbors and share your own tools with the community",
+  "i18nsupport": "Easy to Use",
+  "i18nsupport-desc": "Simple platform to find, borrow, and lend tools in your local area",
+  "hero-title": "Welcome to Local Tool Library",
   "get-started": "Get Started"
 }

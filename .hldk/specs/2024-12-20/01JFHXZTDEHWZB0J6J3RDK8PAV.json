@@ -1,0 +1,24 @@
+{
+  "spec": "Rebrand the template as Local Tool Library",
+  "commitMessage": "Rebrand project as Local Tool Library\n\n- Updated translation files with new branding and messaging\n- Updated main README with project description and purpose\n- Updated frontend README with new project description\n- Updated backend README with service description\n- Rebranded all application text to reflect tool library focus",
+  "stats": {
+    "inputTokens": 29223,
+    "cacheWriteTokens": 9592,
+    "cacheReadTokens": 95920,
+    "outputTokens": 1886,
+    "totalTokens": null,
+    "cost": 0.13552875,
+    "currency": "gbp",
+    "processingMillis": 35421,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 17,
+      "deletions": 17,
+      "linesChanged": 17,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

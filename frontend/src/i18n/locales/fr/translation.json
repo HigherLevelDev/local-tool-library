@@ -1,10 +1,10 @@
 {
-  "title": "Vite React Tailwind Starter",
+  "title": "Bibliothèque d'Outils Locale",
   "features": "Fonctionnalités",
-  "modernstack": "Stack moderne et efficace",
-  "modernstack-desc": "Construit avec vite, react, tailwindcss, shadcnui et plus encore",
-  "i18nsupport": "Support i18n intégré",
-  "i18nsupport-desc": "Expédiez votre produit avec différentes langues nativement",
-  "hero-title": "Créez des applications avec la meilleure expérience de développement que nous aimons",
+  "modernstack": "Partage d'Outils Communautaire",
+  "modernstack-desc": "Empruntez des outils à vos voisins et partagez les vôtres avec la communauté",
+  "i18nsupport": "Facile à Utiliser",
+  "i18nsupport-desc": "Plateforme simple pour trouver, emprunter et prêter des outils dans votre région",
+  "hero-title": "Bienvenue à la Bibliothèque d'Outils Locale",
   "get-started": "Commencer"
 }

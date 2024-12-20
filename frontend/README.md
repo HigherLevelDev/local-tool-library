@@ -1,6 +1,6 @@
-## Higher-Level-Frontend-Starter
+## Local Tool Library Frontend
 
-Choosing a technology stack is a very subjective matter, if you happen to like using `Vite`, `Tailwind`, `TS` and `shadcn ui` and more to build React SPA applications, then give it a try.
+The frontend application for the Local Tool Library platform, enabling community members to easily browse, borrow, and share tools with their neighbors. Built with modern web technologies for a seamless user experience.
 
 ## Run
 

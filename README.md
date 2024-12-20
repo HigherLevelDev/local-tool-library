@@ -1,6 +1,6 @@
-# Full Stack Starter Project
+# Local Tool Library
 
-A modern, full stack application starter template built with NestJS, React, TypeScript, and SQLite/PostgreSQL.
+A community-driven platform for sharing and borrowing tools, built with NestJS, React, TypeScript, and SQLite/PostgreSQL. The Local Tool Library enables neighbors to share their tools, reducing the need for individual tool purchases and fostering community connections.
 
 ## Tech Stack
 

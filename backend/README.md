@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Backend API for the Local Tool Library platform, built with [NestJS](https://github.com/nestjs/nest) framework. This service manages tool inventory, user accounts, borrowing requests, and community interactions for the tool sharing platform.
 
 ## Project setup
 
