@@ -47,6 +47,10 @@ export class SignupDto {
   })
   @IsString()
   @IsNotEmpty()
-  @Matches(/^[A-Z0-9]{4,10}$/, { message: 'Invalid postcode format - must be 4-10 alphanumeric characters' })
+  @MinLength(4)
+  @MaxLength(10)
+  @Matches(/^[A-Z0-9]{4,10}$/, { 
+    message: 'Invalid postcode format - must be 4-10 uppercase alphanumeric characters' 
+  })
   postcode: string;
 }

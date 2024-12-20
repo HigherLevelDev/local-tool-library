@@ -21,19 +21,23 @@ export class AuthController {
   @ApiResponse({ status: 400, description: 'Invalid input data' })
   @ApiResponse({ status: 401, description: 'Email already registered with different credentials' })
   async signup(@Body() signupDto: SignupDto) {
-    // Input validation is handled by ValidationPipe using class-validator decorators
-    const existingUser = await this.userService.findByEmail(signupDto.email);
-    if (existingUser) {
-      // If user exists, try to authenticate them
-      try {
-        await this.authService.validateUser(signupDto.email, signupDto.password);
-        return this.authService.createToken(existingUser);
-      } catch (error) {
-        throw new UnauthorizedException('Email already registered');
-      }
-    }
-
     try {
+      // Validate input data
+      if (!signupDto.email || !signupDto.name || !signupDto.password || !signupDto.phone || !signupDto.postcode) {
+        throw new BadRequestException('All fields are required');
+      }
+
+      const existingUser = await this.userService.findByEmail(signupDto.email);
+      if (existingUser) {
+        // If user exists, try to authenticate them
+        try {
+          await this.authService.validateUser(signupDto.email, signupDto.password);
+          return this.authService.createToken(existingUser);
+        } catch (error) {
+          throw new UnauthorizedException('Email already registered');
+        }
+      }
+
       const user = await this.userService.create(
         signupDto.email,
         signupDto.name,
@@ -43,7 +47,10 @@ export class AuthController {
       );
       return this.authService.createToken(user);
     } catch (error) {
-      throw new UnauthorizedException('Failed to create user');
+      if (error instanceof BadRequestException || error instanceof UnauthorizedException) {
+        throw error;
+      }
+      throw new BadRequestException('Invalid input data');
     }
   }
 

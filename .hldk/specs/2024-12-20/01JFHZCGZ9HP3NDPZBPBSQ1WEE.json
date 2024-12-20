@@ -1,0 +1,24 @@
+{
+  "spec": "run tests and fix issues - we are working on EPIC-01_Local_Tool_Library_POC --> STORY-01_User_Registration_Login --> TASK-02_Backend_Auth_Controllers",
+  "commitMessage": "fix(auth): improve input validation in signup endpoint\n\n- Added explicit validation checks in auth controller\n- Enhanced postcode validation in SignupDTO\n- Fixed failing e2e test for invalid registration data",
+  "stats": {
+    "inputTokens": 33606,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 87939,
+    "outputTokens": 1904,
+    "totalTokens": null,
+    "cost": 0.116819775,
+    "currency": "gbp",
+    "processingMillis": 59209,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 24,
+      "deletions": 13,
+      "linesChanged": 24,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
