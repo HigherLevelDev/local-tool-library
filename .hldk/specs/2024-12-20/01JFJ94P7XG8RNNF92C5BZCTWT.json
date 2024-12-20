@@ -1,0 +1,24 @@
+{
+  "spec": "when adding a tool (add tool in the UI) we don't want to have to give the long and lat... the location should just come from the owners postcode... so it should not be in the add tool request at all",
+  "commitMessage": "Refactored tool location to use owner's postcode instead of lat/long\n\n- Removed latitude and longitude fields from Tool entity and DTOs\n- Added postcode field to Tool entity\n- Updated migrations to use postcode instead of lat/long\n- Modified ToolsService to get location from user's postcode\n- Updated ToolForm to remove lat/long input fields\n- Updated e2e tests to match new schema",
+  "stats": {
+    "inputTokens": 440213,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 404001,
+    "outputTokens": 6465,
+    "totalTokens": null,
+    "cost": 1.154110725,
+    "currency": "gbp",
+    "processingMillis": 217074,
+    "git": {
+      "filesChanged": 9,
+      "insertions": 26,
+      "deletions": 68,
+      "linesChanged": 68,
+      "testFilesChanged": 2,
+      "testInsertions": 8,
+      "testDeletions": 11,
+      "testLinesChanged": 11
+    }
+  }
+}

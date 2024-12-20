@@ -32,9 +32,7 @@ describe('Tools Management (e2e)', () => {
     it('should create a new tool', async () => {
       const createToolDto = {
         title: 'Power Drill',
-        description: 'Professional grade power drill with multiple attachments',
-        latitude: 51.5074,
-        longitude: -0.1278
+        description: 'Professional grade power drill with multiple attachments'
       };
 
       const response = await client.post('/api/tools', createToolDto);
@@ -43,8 +41,7 @@ describe('Tools Management (e2e)', () => {
       expect(response.body).toHaveProperty('id');
       expect(response.body.title).toBe(createToolDto.title);
       expect(response.body.description).toBe(createToolDto.description);
-      expect(response.body.latitude).toBe(createToolDto.latitude);
-      expect(response.body.longitude).toBe(createToolDto.longitude);
+      expect(response.body.postcode).toBe(testUser.postcode);
       expect(response.body.ownerId).toBe(testUser.id);
 
       createdToolId = response.body.id;
@@ -76,9 +73,7 @@ describe('Tools Management (e2e)', () => {
     it('should update an existing tool', async () => {
       const updateToolDto = {
         title: 'Updated Power Drill',
-        description: 'Updated description with new features',
-        latitude: 51.5075,
-        longitude: -0.1279
+        description: 'Updated description with new features'
       };
 
       const response = await client.put(`/api/tools/${createdToolId}`, updateToolDto);
@@ -87,8 +82,7 @@ describe('Tools Management (e2e)', () => {
       expect(response.body).toHaveProperty('id', createdToolId);
       expect(response.body.title).toBe(updateToolDto.title);
       expect(response.body.description).toBe(updateToolDto.description);
-      expect(response.body.latitude).toBe(updateToolDto.latitude);
-      expect(response.body.longitude).toBe(updateToolDto.longitude);
+      expect(response.body.postcode).toBe(testUser.postcode);
     });
   });
 

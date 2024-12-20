@@ -4,6 +4,7 @@ export interface TestUser {
   id: string;
   email: string;
   name: string;
+  postcode: string;
   accessToken: string;
 }
 
@@ -36,6 +37,7 @@ export async function ensureTestUser(client: RestClient, email: string = 'test@e
         id: auth.user.id,
         email: existingUser.email,
         name: existingUser.name,
+        postcode: existingUser.postcode,
         accessToken: auth.access_token
       };
     }
@@ -60,7 +62,8 @@ export async function ensureTestUser(client: RestClient, email: string = 'test@e
       id: user.id,
       email: user.email,
       name: user.name,
-    accessToken: auth.access_token
+      postcode: 'AB12CD',
+      accessToken: auth.access_token
     };
   } catch (error) {
     console.error('Error in ensureTestUser:', error);

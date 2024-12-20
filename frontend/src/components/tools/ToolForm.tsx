@@ -21,8 +21,6 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
     defaultValues: {
       title: tool?.title || '',
       description: tool?.description || '',
-      latitude: tool?.latitude || 0,
-      longitude: tool?.longitude || 0,
     },
   })
 
@@ -73,35 +71,6 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
               )}
             />
 
-            <div className="grid grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="latitude"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className={getThemeClass('components.text.body')}>{t('tools.form.latitude')}</FormLabel>
-                    <FormControl>
-                      <Input className={getThemeClass('components.input.base')} type="number" step="0.000001" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="longitude"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className={getThemeClass('components.text.body')}>{t('tools.form.longitude')}</FormLabel>
-                    <FormControl>
-                      <Input className={getThemeClass('components.input.base')} type="number" step="0.000001" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
 
             <Button 
               type="submit" 

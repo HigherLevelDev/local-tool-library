@@ -7,8 +7,7 @@ exports.up = async function(knex: Knex): Promise<void> {
     table.text('description').notNullable();
     table.string('image_url').notNullable();
     table.string('owner_id').notNullable().references('id').inTable('users').onDelete('CASCADE');
-    table.float('latitude').notNullable();
-    table.float('longitude').notNullable();
+    table.string('postcode').notNullable();
     table.timestamp('created_at').defaultTo(knex.fn.now());
     table.timestamp('updated_at').defaultTo(knex.fn.now());
   });

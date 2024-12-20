@@ -16,11 +16,8 @@ export class Tool {
   @ApiProperty({ description: 'Owner user ID' })
   ownerId: string;
 
-  @ApiProperty({ description: 'Location latitude' })
-  latitude: number;
-
-  @ApiProperty({ description: 'Location longitude' })
-  longitude: number;
+  @ApiProperty({ description: 'Location postcode' })
+  postcode: string;
 
   @ApiProperty({ description: 'Creation timestamp' })
   createdAt: Date;

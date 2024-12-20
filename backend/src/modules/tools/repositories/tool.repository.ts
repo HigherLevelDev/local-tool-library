@@ -17,8 +17,7 @@ export class ToolRepository {
         description: tool.description,
         image_url: tool.imageUrl,
         owner_id: tool.ownerId,
-        latitude: tool.latitude,
-        longitude: tool.longitude,
+        postcode: tool.postcode,
         created_at: now,
         updated_at: now,
       })
@@ -46,8 +45,7 @@ export class ToolRepository {
         ...(tool.description && { description: tool.description }),
         ...(tool.imageUrl && { image_url: tool.imageUrl }),
         ...(tool.ownerId && { owner_id: tool.ownerId }),
-        ...(tool.latitude && { latitude: tool.latitude }),
-        ...(tool.longitude && { longitude: tool.longitude }),
+        ...(tool.postcode && { postcode: tool.postcode }),
         updated_at: new Date(),
       })
       .returning('*');
@@ -67,8 +65,7 @@ export class ToolRepository {
       description: raw.description,
       imageUrl: raw.image_url,
       ownerId: raw.owner_id,
-      latitude: raw.latitude,
-      longitude: raw.longitude,
+      postcode: raw.postcode,
       createdAt: raw.created_at,
       updatedAt: raw.updated_at,
     });

@@ -4,21 +4,30 @@ import { ImageSearchService } from './services/image-search.service';
 import { CreateToolDto } from './dto/create-tool.dto';
 import { UpdateToolDto } from './dto/update-tool.dto';
 import { Tool } from './entities/tool.entity';
+import { UserService } from '../auth/services/user.service';
 
 @Injectable()
 export class ToolsService {
   constructor(
     private readonly toolRepository: ToolRepository,
     private readonly imageSearchService: ImageSearchService,
+    private readonly userService: UserService,
   ) {}
 
   async createTool(userId: string, createToolDto: CreateToolDto): Promise<Tool> {
     const imageUrl = await this.imageSearchService.searchToolImage(createToolDto.title);
     
+    // Get user's postcode for location
+    const user = await this.userService.findById(userId);
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+    
     return this.toolRepository.create({
       ...createToolDto,
       ownerId: userId,
       imageUrl,
+      postcode: user.postcode,
     });
   }
 
