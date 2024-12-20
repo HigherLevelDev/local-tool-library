@@ -33,6 +33,9 @@ export class GlobalExceptionFilter implements ExceptionFilter {
       path: request.url,
       method: request.method,
       message: message,
+      ...(exception instanceof HttpException && exception.getResponse && {
+        error: exception.getResponse(),
+      }),
       ...(process.env.NODE_ENV !== 'production' && {
         stack: exception.stack,
       }),

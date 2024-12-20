@@ -1,0 +1,24 @@
+{
+  "spec": "2024-12-20T12:46:22.502Z ERROR [ErrorFilter]: Error processing request: Validation failed\n{\n  \"error\": {\n    \"statusCode\": 400,\n    \"timestamp\": \"2024-12-20T12:46:22.502Z\",\n    \"path\": \"/api/auth/signup\",\n    \"method\": \"POST\",\n    \"message\": \"Validation failed\",\n    \"stack\": \"BadRequestException: Validation failed\\n    at GlobalValidationPipe.transform (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/src/modules/validation/validation.pipe.ts:53:13)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async resolveParamValue (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:148:23)\\n    at async Promise.all (index 0)\\n    at async pipesFn (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:151:13)\\n    at async /Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:37:30\"\n  },\n  \"stack\": \"BadRequestException: Validation failed\\n    at GlobalValidationPipe.transform (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/src/modules/validation/validation.pipe.ts:53:13)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async resolveParamValue (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:148:23)\\n    at async Promise.all (index 0)\\n    at async pipesFn (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:151:13)\\n    at async /Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:37:30\"\n}\n2024-12-20T12:46:22.499Z ERROR: Validation failed\n{\n  \"metatype\": \"SignupDto\",\n  \"errors\": [\n    {\n      \"field\": \"phone\",\n      \"constraints\": [\n        \"Invalid phone number format\",\n        \"phone should not be empty\",\n        \"phone must be a string\"\n      ],\n      \"message\": \"Invalid phone number format, phone should not be empty, phone must be a string\"\n    },\n    {\n      \"field\": \"postcode\",\n      \"constraints\": [\n        \"Invalid postcode format - must be 4-10 uppercase alphanumeric characters\",\n        \"postcode must be shorter than or equal to 10 characters\",\n        \"postcode must be longer than or equal to 4 characters\",\n        \"postcode should not be empty\",\n        \"postcode must be a string\"\n      ],\n      \"message\": \"Invalid postcode format - must be 4-10 uppercase alphanumeric characters, postcode must be shorter than or equal to 10 characters, postcode must be longer than or equal to 4 characters, postcode should not be empty, postcode must be a string\"\n    }\n  ],\n  \"receivedFields\": [\n    \"name\",\n    \"email\",\n    \"password\"\n  ],\n  \"expectedFields\": []\n}\n\nMake changes so that we see the errors in the API response",
+  "commitMessage": "Improve validation error responses\n\n- Include validation errors in HTTP response\n- Better structure validation error messages\n- Show field-specific validation failures in API response",
+  "stats": {
+    "inputTokens": 13181,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 49165,
+    "outputTokens": 831,
+    "totalTokens": null,
+    "cost": 0.050068125,
+    "currency": "gbp",
+    "processingMillis": 18027,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 12,
+      "deletions": 2,
+      "linesChanged": 12,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

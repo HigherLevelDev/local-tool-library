@@ -51,9 +51,16 @@ export class GlobalValidationPipe implements PipeTransform<any> {
       });
 
       throw new BadRequestException({
+        statusCode: 400,
         message: 'Validation failed',
-        validationErrors: messages,
-        details: 'Please check the validation errors for each field and correct your input'
+        error: 'Bad Request',
+        validationErrors: messages.reduce((acc, curr) => {
+          acc[curr.field] = {
+            value: curr.value,
+            constraints: curr.constraints
+          };
+          return acc;
+        }, {}),
       });
     }
 
