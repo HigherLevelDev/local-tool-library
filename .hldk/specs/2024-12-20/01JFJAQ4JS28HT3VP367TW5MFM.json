@@ -1,0 +1,24 @@
+{
+  "spec": "create the tasks for story 3 - only simple happy path testing",
+  "commitMessage": "Add tasks for implementing tool search functionality",
+  "stats": {
+    "inputTokens": 28116,
+    "cacheWriteTokens": 9155,
+    "cacheReadTokens": 82395,
+    "outputTokens": 3182,
+    "totalTokens": null,
+    "cost": 0.1433458125,
+    "currency": "gbp",
+    "processingMillis": 54887,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 37,
+      "deletions": 1,
+      "linesChanged": 37,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
