@@ -1,0 +1,24 @@
+{
+  "spec": "index-b93d4a2c.js:40 Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at Ga (index-b93d4a2c.js:40:49308)\n    at d (index-b93d4a2c.js:38:7878)\n    at y (index-b93d4a2c.js:38:9255)\n    at w (index-b93d4a2c.js:38:11331)\n    at St (index-b93d4a2c.js:40:1475)\n    at Xy (index-b93d4a2c.js:40:45665)\n    at Qy (index-b93d4a2c.js:40:39724)\n    at yC (index-b93d4a2c.js:40:39652)\n    at bl (index-b93d4a2c.js:40:39506)\n    at bd (index-b93d4a2c.js:40:35874)\nfd @ index-b93d4a2c.js:40Understand this errorAI\nindex-b93d4a2c.js:59 React Router caught the following error during render Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at Ga (index-b93d4a2c.js:40:49308)\n    at d (index-b93d4a2c.js:38:7878)\n    at y (index-b93d4a2c.js:38:9255)\n    at w (index-b93d4a2c.js:38:11331)\n    at St (index-b93d4a2c.js:40:1475)\n    at Xy (index-b93d4a2c.js:40:45665)\n    at Qy (index-b93d4a2c.js:40:39724)\n    at yC (index-b93d4a2c.js:40:39652)\n    at bl (index-b93d4a2c.js:40:39506)\n    at bd (index-b93d4a2c.js:40:35874) Object",
+  "commitMessage": "fix: Update router configuration to properly handle layouts and fix React error #130\n\n- Simplified router configuration by removing unnecessary Component handling\n- Applied default layout directly in route definitions\n- Fixed potential undefined rendering issues",
+  "stats": {
+    "inputTokens": 14673,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 68831,
+    "outputTokens": 1165,
+    "totalTokens": null,
+    "cost": 0.061607475,
+    "currency": "gbp",
+    "processingMillis": 37600,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 3,
+      "deletions": 9,
+      "linesChanged": 9,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

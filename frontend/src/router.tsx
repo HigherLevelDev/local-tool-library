@@ -38,28 +38,22 @@ function PublicOnlyRoute({ children }: PublicOnlyRouteProps) {
 export const routerObjects: RouteObject[] = [
   {
     path: '/',
-    element: <ProtectedRoute><HomePage /></ProtectedRoute>,
+    element: getDefaultLayout(<ProtectedRoute><HomePage /></ProtectedRoute>),
   },
   {
     path: '/login',
-    element: <PublicOnlyRoute><LoginPage /></PublicOnlyRoute>,
+    element: getDefaultLayout(<PublicOnlyRoute><LoginPage /></PublicOnlyRoute>),
   },
   {
     path: '/signup',
-    element: <PublicOnlyRoute><SignupPage /></PublicOnlyRoute>,
+    element: getDefaultLayout(<PublicOnlyRoute><SignupPage /></PublicOnlyRoute>),
   },
 ]
 
 export function createRouter(): ReturnType<typeof createHashRouter> {
   const routeWrappers = routerObjects.map((router) => {
-    // @ts-ignore TODO: better type support
-    const getLayout = router.Component?.getLayout || getDefaultLayout
-    const Component = router.Component!
-    const page = getLayout(<Component />)
     return {
       ...router,
-      element: page,
-      Component: null,
       ErrorBoundary: ErrorPage,
     }
   })
