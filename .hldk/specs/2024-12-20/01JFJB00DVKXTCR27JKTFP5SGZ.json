@@ -1,24 +1,24 @@
 {
   "spec": "implement EPIC-01_Local_Tool_Library_POC --> STORY-03_Tool_Search --> TASK-01_Backend_Search_Implementation",
-  "commitMessage": "Implemented tool search functionality:\n- Added search endpoint to ToolsController\n- Added search method to ToolsService\n- Added search functionality to ToolRepository\n- Added e2e tests for search functionality",
+  "commitMessage": "Implement backend search functionality for tools",
   "stats": {
-    "inputTokens": 52818,
+    "inputTokens": 77061,
     "cacheWriteTokens": 10564,
-    "cacheReadTokens": 137332,
-    "outputTokens": 3136,
+    "cacheReadTokens": 169024,
+    "outputTokens": 3641,
     "totalTokens": null,
-    "cost": 0.21473145,
+    "cost": 0.28209015000000004,
     "currency": "gbp",
-    "processingMillis": 72944,
+    "processingMillis": 86895,
     "git": {
-      "filesChanged": 5,
-      "insertions": 82,
-      "deletions": 3,
-      "linesChanged": 82,
-      "testFilesChanged": 1,
-      "testInsertions": 42,
+      "filesChanged": 1,
+      "insertions": 2,
+      "deletions": 2,
+      "linesChanged": 2,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
       "testDeletions": 0,
-      "testLinesChanged": 42
+      "testLinesChanged": 0
     }
   }
 }
