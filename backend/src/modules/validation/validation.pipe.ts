@@ -21,15 +21,19 @@ export class GlobalValidationPipe implements PipeTransform<any> {
 
     if (errors.length > 0) {
       const messages = errors.map(error => {
+        const constraints = Object.values(error.constraints || {});
         return {
-          property: error.property,
-          constraints: error.constraints,
+          field: error.property,
+          value: error.value,
+          constraints: constraints,
+          message: constraints.join(', ')
         };
       });
       
       throw new BadRequestException({
         message: 'Validation failed',
-        errors: messages,
+        validationErrors: messages,
+        details: 'Please check the validation errors for each field and correct your input'
       });
     }
 

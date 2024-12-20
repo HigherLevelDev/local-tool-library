@@ -1,0 +1,24 @@
+{
+  "spec": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2024-12-20T12:41:47.695Z\",\n    \"path\": \"/api/auth/signup\",\n    \"method\": \"POST\",\n    \"message\": \"Validation failed\",\n    \"stack\": \"BadRequestException: Validation failed\\n    at GlobalValidationPipe.transform (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/src/modules/validation/validation.pipe.ts:30:13)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async resolveParamValue (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:148:23)\\n    at async Promise.all (index 0)\\n    at async pipesFn (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:151:13)\\n    at async /Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:37:30\"\n}\n\nwe need to know what validation is failing... make changes to give us more info",
+  "commitMessage": "Enhance validation error messages to provide more detailed feedback\n\n- Added field value to error messages\n- Improved error message formatting\n- Added more descriptive validation error details",
+  "stats": {
+    "inputTokens": 5994,
+    "cacheWriteTokens": 9833,
+    "cacheReadTokens": 29499,
+    "outputTokens": 617,
+    "totalTokens": null,
+    "cost": 0.0547203375,
+    "currency": "gbp",
+    "processingMillis": 14772,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 7,
+      "deletions": 3,
+      "linesChanged": 7,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
