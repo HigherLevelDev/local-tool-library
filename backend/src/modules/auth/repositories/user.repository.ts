@@ -50,6 +50,8 @@ export class UserRepository {
       email: row.email,
       name: row.name,
       passwordHash: row.password_hash,
+      phone: row.phone,
+      postcode: row.postcode,
       createdAt: row.created_at,
       updatedAt: row.updated_at
     } : null;
@@ -61,6 +63,8 @@ export class UserRepository {
       email: entity.email,
       name: entity.name,
       password_hash: entity.passwordHash,
+      phone: entity.phone,
+      postcode: entity.postcode,
       created_at: entity.createdAt,
       updated_at: entity.updatedAt,
     };

@@ -32,12 +32,23 @@ export class AuthService {
   }
 
   async createToken(user: User) {
-    const payload = { sub: user.id, email: user.email };
+    const payload = { 
+      sub: user.id, 
+      email: user.email,
+      name: user.name,
+      postcode: user.postcode
+    };
     const expiresIn = '7d';
     
     return {
       access_token: await this.jwtService.signAsync(payload, { expiresIn }),
       user_id: user.id,
+      user: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        postcode: user.postcode
+      },
       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
     };
   }

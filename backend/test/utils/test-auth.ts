@@ -42,7 +42,9 @@ export async function ensureTestUser(client: RestClient, email: string = 'test@e
     const authResponse = await client.post('/api/auth/signup', {
       email,
       name: 'Test User',
-      password: 'test1234'
+      password: 'test1234',
+      phone: '+1234567890',
+      postcode: 'AB12CD'
     });
 
     const auth = authResponse.body;

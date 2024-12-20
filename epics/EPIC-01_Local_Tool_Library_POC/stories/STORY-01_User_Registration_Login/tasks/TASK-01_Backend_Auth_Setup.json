@@ -3,8 +3,8 @@
   "title": "Set up backend authentication infrastructure",
   "description": "Implement core authentication infrastructure in the backend including user entity, repository, and basic auth service.\n\nChanges needed:\n1. Update users migration to add phone and postcode fields\n2. Update User entity with new fields and validation\n3. Update UserRepository with basic CRUD operations\n4. Update AuthService with registration and token generation\n5. Add input validation for all fields\n\nFiles to modify:\n- backend/src/migrations/20240319000000_create_users_table.ts\n- backend/src/modules/auth/entities/user.entity.ts\n- backend/src/modules/auth/repositories/user.repository.ts\n- backend/src/modules/auth/services/auth.service.ts\n\nTesting Requirements:\n1. E2E test for user creation with all required fields\n2. Verify password hashing works correctly\n3. Verify token generation works\n4. Test duplicate email prevention",
   "assignee": "se-agent",
-  "status": "backlog",
+  "status": "inprogress",
   "createdAt": "2024-12-20T11:52:04.240Z",
-  "updatedAt": "2024-12-20T11:52:04.240Z",
+  "updatedAt": "2024-12-20T11:56:49.231Z",
   "acceptanceCriteria": ["AC01", "AC02", "AC03"]
 }

@@ -35,7 +35,9 @@ export class AuthController {
       const user = await this.userService.create(
         signupDto.email,
         signupDto.name,
-        signupDto.password
+        signupDto.password,
+        signupDto.phone,
+        signupDto.postcode
       );
       return this.authService.createToken(user);
     } catch (error) {
