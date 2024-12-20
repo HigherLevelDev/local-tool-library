@@ -2,9 +2,9 @@
   "id": "STORY-02_Tool_Management",
   "title": "Tool Registration and Management",
   "description": "As a tool owner, I want to add, edit, and remove my tools from the library so that I can share them with my neighbors",
-  "status": "inprogress",
+  "status": "done",
   "createdAt": "2024-12-20T11:49:23.033Z",
-  "updatedAt": "2024-03-19T10:00:00.000Z",
+  "updatedAt": "2024-12-20T14:38:01.881Z",
   "acceptanceCriteria": [
     "AC01: Given a logged-in user, when they access the 'Add Tool' page, they should see a form requesting tool title and description",
     "AC02: Given a tool title, when a tool is being created, then an appropriate image should be automatically fetched and associated",

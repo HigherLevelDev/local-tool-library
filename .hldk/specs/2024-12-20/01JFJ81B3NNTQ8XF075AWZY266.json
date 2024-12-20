@@ -1,0 +1,24 @@
+{
+  "spec": "mark story 2 as complete",
+  "commitMessage": "Marked STORY-02_Tool_Management as complete with all tasks done",
+  "stats": {
+    "inputTokens": 99216,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 103400,
+    "outputTokens": 1085,
+    "totalTokens": null,
+    "cost": 0.25870725,
+    "currency": "gbp",
+    "processingMillis": 31547,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 2,
+      "deletions": 2,
+      "linesChanged": 2,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
