@@ -7,6 +7,7 @@ import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 import { Button } from '../ui/button'
 import { Tool, CreateToolDto, UpdateToolDto } from '../../lib/tool.service'
+import { getThemeClass } from '../../lib/theme'
 
 interface ToolFormProps {
   tool?: Tool
@@ -35,9 +36,11 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
   }
 
   return (
-    <Card>
+    <Card className={getThemeClass('components.card.base')}>
       <CardHeader>
-        <CardTitle>{tool ? t('tools.edit.title') : t('tools.add.title')}</CardTitle>
+        <CardTitle className={getThemeClass('components.text.heading')}>
+          {tool ? t('tools.edit.title') : t('tools.add.title')}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -47,9 +50,9 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t('tools.form.title')}</FormLabel>
+                  <FormLabel className={getThemeClass('components.text.body')}>{t('tools.form.title')}</FormLabel>
                   <FormControl>
-                    <Input {...field} />
+                    <Input className={getThemeClass('components.input.base')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -61,9 +64,9 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t('tools.form.description')}</FormLabel>
+                  <FormLabel className={getThemeClass('components.text.body')}>{t('tools.form.description')}</FormLabel>
                   <FormControl>
-                    <Textarea {...field} />
+                    <Textarea className={getThemeClass('components.input.base')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -76,9 +79,9 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
                 name="latitude"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t('tools.form.latitude')}</FormLabel>
+                    <FormLabel className={getThemeClass('components.text.body')}>{t('tools.form.latitude')}</FormLabel>
                     <FormControl>
-                      <Input type="number" step="0.000001" {...field} />
+                      <Input className={getThemeClass('components.input.base')} type="number" step="0.000001" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -90,9 +93,9 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
                 name="longitude"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t('tools.form.longitude')}</FormLabel>
+                    <FormLabel className={getThemeClass('components.text.body')}>{t('tools.form.longitude')}</FormLabel>
                     <FormControl>
-                      <Input type="number" step="0.000001" {...field} />
+                      <Input className={getThemeClass('components.input.base')} type="number" step="0.000001" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -100,7 +103,11 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
               />
             </div>
 
-            <Button type="submit" disabled={isLoading}>
+            <Button 
+              type="submit" 
+              disabled={isLoading}
+              className={getThemeClass('components.button.primary')}
+            >
               {isLoading ? t('common.loading') : tool ? t('common.update') : t('common.create')}
             </Button>
           </form>

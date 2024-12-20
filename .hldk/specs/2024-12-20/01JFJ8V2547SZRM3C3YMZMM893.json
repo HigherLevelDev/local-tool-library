@@ -1,0 +1,24 @@
+{
+  "spec": "update the buttons and text on the add tools page to match the theme (blue)",
+  "commitMessage": "Update add tools page styling to match blue theme\n\n- Added theme classes to add-tool page container and header\n- Updated ToolForm component with themed styles for card, text, inputs and button\n- Applied consistent blue theme across all form elements",
+  "stats": {
+    "inputTokens": 16677,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 72513,
+    "outputTokens": 2259,
+    "totalTokens": null,
+    "cost": 0.079252425,
+    "currency": "gbp",
+    "processingMillis": 36190,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 20,
+      "deletions": 13,
+      "linesChanged": 20,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

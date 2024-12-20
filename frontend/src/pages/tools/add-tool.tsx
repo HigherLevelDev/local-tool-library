@@ -41,8 +41,8 @@ export function AddToolPage() {
   }
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-2xl font-bold mb-6">{t('tools.add.title')}</h1>
+    <div className={`container mx-auto py-8 ${getThemeClass('components.tools.container')}`}>
+      <h1 className={getThemeClass('components.tools.header')}>{t('tools.add.title')}</h1>
       <div className="max-w-2xl">
         <ToolForm onSubmit={handleSubmit} isLoading={isSubmitting} />
       </div>
