@@ -7,6 +7,7 @@ import { LoggingModule } from './modules/logging/logging.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { JwtAuthGuard } from './modules/auth/guards/jwt-auth.guard';
 import { SwaggerModule } from './modules/swagger/swagger.module';
+import { ToolsModule } from './modules/tools/tools.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { SwaggerModule } from './modules/swagger/swagger.module';
     MonitoringModule,
     AuthModule,
     SwaggerModule,
+    ToolsModule,
   ],
   providers: [
     {
