@@ -1,0 +1,24 @@
+{
+  "spec": "this my tools in the header is wrong  - it should link to /tools/my and not /tools/my-tools",
+  "commitMessage": "fix: update My Tools link in header to correct path /tools/my",
+  "stats": {
+    "inputTokens": 6513,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 51795,
+    "outputTokens": 600,
+    "totalTokens": null,
+    "cost": 0.033058125,
+    "currency": "gbp",
+    "processingMillis": 31070,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 1,
+      "deletions": 1,
+      "linesChanged": 1,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

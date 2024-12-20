@@ -24,7 +24,7 @@ export function Header(props: IProps) {
           {t('title')}
         </Link>
         <Link 
-          to="/tools/my-tools" 
+          to="/tools/my" 
           className={`${getThemeClass('components.nav.link')} ${isActive('/tools')}`}
         >
           {t('tools.nav.myTools')}
