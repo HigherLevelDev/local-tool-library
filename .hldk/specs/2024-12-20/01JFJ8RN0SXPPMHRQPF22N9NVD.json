@@ -1,0 +1,24 @@
+{
+  "spec": "The my tools and add tools pages are overlapping with the header... can you fix that?",
+  "commitMessage": "fix: Add proper spacing between header and page content to prevent overlapping",
+  "stats": {
+    "inputTokens": 10043,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 51795,
+    "outputTokens": 681,
+    "totalTokens": null,
+    "cost": 0.041911875,
+    "currency": "gbp",
+    "processingMillis": 19411,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 4,
+      "deletions": 2,
+      "linesChanged": 4,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
