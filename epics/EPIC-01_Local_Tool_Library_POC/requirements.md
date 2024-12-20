@@ -1,110 +1,86 @@
 # Local Tool Library POC
 
 ## Description
-A web and mobile-web application that enables neighbors to share tools within their community. The platform facilitates tool discovery and sharing while keeping personal information private and communications off-platform. The system will provide a seamless experience for both tool owners and borrowers with an emphasis on easy tool registration, discovery, and location-based searching.
+A simple web application that enables neighbors to share tools within their community. Users can register tools they're willing to share and search for tools they need to borrow. The platform provides basic tool discovery and location information while keeping personal information private.
 
 ## Goals
-- Create a user-friendly platform for neighborhood tool sharing
-- Enable easy tool registration with automated image enhancement
-- Provide efficient search and discovery mechanisms
-- Maintain user privacy while enabling tool location visibility
-- Deliver a production-ready API with complete documentation
+- Create a basic platform for neighborhood tool sharing
+- Enable simple tool registration with automated image finding
+- Provide basic search functionality
+- Show approximate tool locations on a map
+- Deliver a functional API with basic documentation
 
 ## Success Criteria
-- Users can successfully register with email, phone, and postcode
-- Tool owners can add tools with automated image assignment
-- Users can search and find tools based on title and description
-- Tool locations are displayed appropriately on a map
-- API is fully documented with Swagger/OpenAPI
-- Authentication system is implemented and secure
+- Users can register with email, phone, and postcode
+- Users can add tools with automated image assignment
+- Users can search for tools by title/description
+- Tool locations are displayed on a map
+- API is documented with Swagger
+- Basic authentication is implemented and secure
 
 ## Technical Requirements
 
-### Authentication & Authorization
-- OAuth 2.0 implementation with password grant flow
-- Secure token management and refresh mechanisms
-- Role-based access control (tool owner vs borrower)
+### Authentication
+- Simple OAuth 2.0 implementation with password grant
+- Basic token management
+- Login/logout functionality
 
 ### API Requirements
 - RESTful API design
-- OpenAPI/Swagger documentation
-- API versioning support
-- Proper error handling and status codes
-- Rate limiting implementation
+- Basic Swagger documentation
+- Standard error responses
 
 ### User Management
-- User registration with email, phone, and postcode
-- Profile management capabilities
-- No phone verification required
-- Password reset functionality
-- User deletion capability
+- User registration with:
+  * Email
+  * Phone number
+  * Postcode
+  * Password
+- Basic profile viewing
 
 ### Tool Management
 - Tool registration with:
   * Title
   * Description
-  * Automated image URL generation based on title
-  * Location (derived from owner's postcode)
-- Tool editing and deletion capabilities
-- Tool availability status management
+  * Automated image URL (based on title)
+  * Location (from owner's postcode)
+- Basic tool editing and deletion
 
 ### Search & Discovery
-- Full-text search on tool title and description
-- Location-based search capabilities
-- Search result pagination
-- Filter and sort options
-- Responsive search results UI
+- Simple text search on tool title and description
+- Basic results display
+- Mobile-responsive results page
 
 ### Location Services
-- Postcode to coordinate conversion
-- Map integration for tool location display
-- Privacy-conscious location display (approximate location only)
-- Map clustering for areas with multiple tools
+- Basic postcode to coordinate conversion
+- Simple map display of tool location
+- Approximate location display for privacy
 
 ### Image Management
-- Integration with web-based image search API
-- Image caching and optimization
-- Fallback images for failed searches
-- Image moderation capabilities
+- Basic web image search integration
+- Simple fallback image for failed searches
 
 ### Non-Functional Requirements
 
-#### Performance
-- Search results returned within 500ms
-- Page load time under 2 seconds
-- Support for 1000+ concurrent users
-- 99.9% uptime SLA
-
 #### Security
 - HTTPS encryption
-- Input validation and sanitization
-- XSS and CSRF protection
-- SQL injection prevention
-- Rate limiting on API endpoints
-- Secure password storage (bcrypt/argon2)
-
-#### Scalability
-- Horizontal scaling capability
-- Caching strategy for frequently accessed data
-- Database indexing for efficient searches
-- CDN integration for static assets
-
-#### Monitoring & Logging
-- API usage metrics
-- Error tracking and reporting
-- Performance monitoring
-- User activity logging
-- Security event logging
+- Basic input validation
+- Secure password storage
 
 #### Browser Support
-- Support for latest 2 versions of major browsers
+- Support for modern browsers
 - Mobile-responsive design
-- Progressive Web App capabilities
 
 ## Out of Scope
-- In-app messaging system
+- API versioning
+- Rate limiting
+- Password reset
+- Advanced search filters
+- Image optimization
+- Performance monitoring
+- User ratings
+- In-app messaging
 - Payment processing
 - Tool delivery logistics
-- User ratings/reviews
-- Phone number verification
+- Phone verification
 - Social media integration

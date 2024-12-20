@@ -1,0 +1,24 @@
+{
+  "spec": "Simplify for the POC... no versioning of API etc.. just include the basic min for now",
+  "commitMessage": "Refactored Requirements Document",
+  "stats": {
+    "inputTokens": 5001,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 4170,
+    "outputTokens": 1667,
+    "totalTokens": null,
+    "cost": 0.030944250000000003,
+    "currency": "gbp",
+    "processingMillis": 24375,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 47,
+      "deletions": 71,
+      "linesChanged": 71,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
