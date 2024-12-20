@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from 'src/lib/auth.context'
 import { Hero } from 'src/components/hero'
 import { SearchBar } from 'src/components/tools/SearchBar'
 import { ToolService, Tool } from 'src/lib/tool.service'
@@ -10,6 +12,14 @@ export default function Home() {
   const [searchResults, setSearchResults] = useState<Tool[]>([])
   const [isSearching, setIsSearching] = useState(false)
   const { t } = useTranslation('translation')
+  const { isAuthenticated } = useAuth()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/auth/login')
+    }
+  }, [isAuthenticated, navigate])
   const handleSearch = async (query: string) => {
     setIsSearching(true)
     try {

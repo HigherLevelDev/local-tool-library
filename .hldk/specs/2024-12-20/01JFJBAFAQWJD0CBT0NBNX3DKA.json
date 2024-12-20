@@ -1,0 +1,24 @@
+{
+  "spec": "implement EPIC-01_Local_Tool_Library_POC --> STORY-03_Tool_Search --> TASK-03_Homepage_Auth_Redirect",
+  "commitMessage": "feat: Add authentication check and redirect to homepage\n\n- Added authentication check to homepage with redirect to login\n- Updated hero component to show login button for unauthenticated users\n- Added useEffect hook for auth status monitoring\n- Implemented conditional rendering based on auth status",
+  "stats": {
+    "inputTokens": 41798,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 127164,
+    "outputTokens": 3596,
+    "totalTokens": null,
+    "cost": 0.1631124,
+    "currency": "gbp",
+    "processingMillis": 71326,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 29,
+      "deletions": 2,
+      "linesChanged": 29,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

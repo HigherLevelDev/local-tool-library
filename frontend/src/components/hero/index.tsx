@@ -1,10 +1,17 @@
-import { Rocket, Globe2, Zap } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '../ui/button'
 import { getThemeClass } from '../../lib/theme'
+import { useAuth } from '../../lib/auth.context'
 
 export const Hero = () => {
   const { t } = useTranslation()
+  const { isAuthenticated } = useAuth()
+  const navigate = useNavigate()
+
+  const handleLoginClick = () => {
+    navigate('/auth/login')
+  }
 
   return (
     <div className={`flex min-h-screen ${getThemeClass('gradients.primary')}`}>
@@ -16,6 +23,16 @@ export const Hero = () => {
                 <h1 className="mb-6 text-3xl font-bold tracking-tighter text-transparent text-white sm:text-5xl xl:text-6xl/none">
                   {t('hero-title')}
                 </h1>
+                {!isAuthenticated && (
+                  <div className="flex justify-center">
+                    <Button
+                      onClick={handleLoginClick}
+                      className={getThemeClass('components.button.primary')}
+                    >
+                      {t('login.signIn')}
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
