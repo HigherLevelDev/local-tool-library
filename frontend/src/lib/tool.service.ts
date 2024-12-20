@@ -102,7 +102,7 @@ export class ToolService {
 
   static async getMyTools(): Promise<Tool[]> {
     try {
-      const response = await fetch(`${env.VITE_API_URL}/api/tools/my`, {
+      const response = await fetch(`${env.VITE_API_URL}/api/tools/my-tools`, {
         headers: this.getHeaders(),
       })
 

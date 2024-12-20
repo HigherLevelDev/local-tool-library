@@ -1,0 +1,24 @@
+{
+  "spec": "my-tools.tsx:23 Fetch tools error: ToolError: Tool not found\n    at ToolService.getMyTools (tool.service.ts:111:15)\n    at async fetchTools (my-tools.tsx:20:20)\nfetchTools\t@\tmy-tools.tsx:23\nawait in fetchTools\t\t\n(anonymous)\t@\tmy-tools.tsx:35\n\nadd-tool.tsx:44 Uncaught ReferenceError: getThemeClass is not defined\n    at AddToolPage (add-tool.tsx:44:21)\nadd-tool.tsx:44 Uncaught ReferenceError: getThemeClass is not defined\n    at AddToolPage (add-tool.tsx:44:21)\nchunk-Z4APPW6Q.js?v=1f80bec1:14052 The above error occurred in the <ErrorPage> component:\n\n    at ErrorPage (http://localhost:5001/src/components/error-page/index.tsx:22:17)\n    at RenderErrorBoundary (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:4044:5)\n    at DataRoutes (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:5239:5)\n    at Router (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:4498:15)\n    at RouterProvider (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:5053:5)\n    at AuthProvider (http://localhost:5001/src/lib/auth.context.tsx:21:3)\n    at QueryClientProvider (http://localhost:5001/node_modules/.vite/deps/chunk-T7YKUEBR.js?v=1f80bec1:2789:3)\n    at App (http://localhost:5001/src/App.tsx?t=1734706233398:26:23)\n\nConsider adding an error boundary to your tree to customize error handling behavior.\nVisit https://reactjs.org/link/error-boundaries to learn more about error boundaries.\nchunk-Z4APPW6Q.js?v=1f80bec1:14233 Uncaught Error: A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition.\n    at throwException (chunk-Z4APPW6Q.js?v=1f80bec1:14233:43)\n    at handleError (chunk-Z4APPW6Q.js?v=1f80bec1:19062:15)\n    at renderRootSync (chunk-Z4APPW6Q.js?v=1f80bec1:19147:15)\n    at recoverFromConcurrentError (chunk-Z4APPW6Q.js?v=1f80bec1:18764:28)\n    at performSyncWorkOnRoot (chunk-Z4APPW6Q.js?v=1f80bec1:18907:28)\n    at flushSyncCallbacks (chunk-Z4APPW6Q.js?v=1f80bec1:9135:30)\n    at chunk-Z4APPW6Q.js?v=1f80bec1:18655:21\ni18next.js?v=1f80bec1:215 i18next::backendConnector: loaded namespace notfound for language en \n{oops: 'Oops!', title: 'Sorry, an unexpected error has occurred.', backtohomepage: 'Back to home page'}",
+  "commitMessage": "Fixed frontend tool management issues:\n1. Added missing getThemeClass import in add-tool.tsx\n2. Fixed incorrect API endpoint in tool.service.ts for fetching user's tools",
+  "stats": {
+    "inputTokens": 30076,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 82872,
+    "outputTokens": 1129,
+    "totalTokens": null,
+    "cost": 0.09901845000000001,
+    "currency": "gbp",
+    "processingMillis": 25890,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 2,
+      "deletions": 1,
+      "linesChanged": 2,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

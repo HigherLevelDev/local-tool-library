@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useToast } from '../../hooks/use-toast'
 import { ToolForm } from '../../components/tools/ToolForm'
 import { ToolService, CreateToolDto, UpdateToolDto } from '../../lib/tool.service'
+import { getThemeClass } from '../../lib/theme'
 
 export function AddToolPage() {
   const { t } = useTranslation()
