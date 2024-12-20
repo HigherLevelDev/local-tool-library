@@ -44,9 +44,6 @@ export function ToolCard({ tool, onEdit, onDelete }: ToolCardProps) {
       </CardHeader>
       <CardContent>
         <p className="text-sm text-gray-600">{tool.description}</p>
-        <div className="mt-2 text-sm text-gray-500">
-          <p>{t('tools.card.location')}: {tool.latitude}, {tool.longitude}</p>
-        </div>
       </CardContent>
       <CardFooter className="flex justify-end space-x-2">
         <Button 

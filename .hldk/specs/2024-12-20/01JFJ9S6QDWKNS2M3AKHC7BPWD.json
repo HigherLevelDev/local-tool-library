@@ -1,0 +1,24 @@
+{
+  "spec": "remove logitude and latitude from frontend dtos to match the new backend structure",
+  "commitMessage": "Remove latitude and longitude from frontend DTOs and components to match backend structure\n\n- Updated Tool interface to remove latitude and longitude fields\n- Updated CreateToolDto and UpdateToolDto to remove latitude and longitude\n- Removed location display from ToolCard component\n- Updated AddToolPage validation to remove latitude/longitude checks",
+  "stats": {
+    "inputTokens": 38905,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 113949,
+    "outputTokens": 1557,
+    "totalTokens": null,
+    "cost": 0.13069102500000002,
+    "currency": "gbp",
+    "processingMillis": 55234,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 1,
+      "deletions": 10,
+      "linesChanged": 10,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

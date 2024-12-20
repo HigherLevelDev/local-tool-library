@@ -14,8 +14,6 @@ export interface Tool {
   description: string
   imageUrl: string
   ownerId: string
-  latitude: number
-  longitude: number
   createdAt: Date
   updatedAt: Date
 }
@@ -23,15 +21,11 @@ export interface Tool {
 export interface CreateToolDto {
   title: string
   description: string
-  latitude: number
-  longitude: number
 }
 
 export interface UpdateToolDto {
   title?: string
   description?: string
-  latitude?: number
-  longitude?: number
 }
 
 export class ToolService {

@@ -13,7 +13,7 @@ export function AddToolPage() {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
 
   const handleSubmit = async (data: CreateToolDto | UpdateToolDto) => {
-    if (!data.title || !data.description || !data.latitude || !data.longitude) {
+    if (!data.title || !data.description) {
       toast({
         title: t('tools.add.error'),
         description: t('tools.add.errorDescription'),
