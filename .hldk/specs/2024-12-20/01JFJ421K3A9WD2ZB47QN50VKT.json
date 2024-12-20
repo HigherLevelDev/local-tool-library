@@ -1,0 +1,24 @@
+{
+  "spec": "implement EPIC-01_Local_Tool_Library_POC --> STORY-02_Tool_Management --> TASK-03_Tool_Management_Backend",
+  "commitMessage": "Implement Tool Management Backend\n\n- Created DTOs for tool creation and updates\n- Implemented ToolsService with CRUD operations\n- Added ToolsController with REST endpoints\n- Updated ToolsModule configuration\n- Added e2e tests for tool management endpoints\n- Integrated with ImageSearchService for tool images\n- Added proper validation and error handling",
+  "stats": {
+    "inputTokens": 129281,
+    "cacheWriteTokens": 10123,
+    "cacheReadTokens": 202460,
+    "outputTokens": 8260,
+    "totalTokens": null,
+    "cost": 0.4578316875,
+    "currency": "gbp",
+    "processingMillis": 244821,
+    "git": {
+      "filesChanged": 7,
+      "insertions": 310,
+      "deletions": 88,
+      "linesChanged": 310,
+      "testFilesChanged": 1,
+      "testInsertions": 113,
+      "testDeletions": 84,
+      "testLinesChanged": 113
+    }
+  }
+}
