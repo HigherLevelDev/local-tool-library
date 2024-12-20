@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { Tool } from '../../lib/tool.service'
 import { ToolCard } from './ToolCard'
 import { getThemeClass } from '../../lib/theme'
+import { useAuth } from '../../lib/auth.context'
 
 interface SearchResultsProps {
   results: Tool[]
@@ -14,9 +15,18 @@ interface SearchResultsProps {
 export function SearchResults({ results, total, loading }: SearchResultsProps) {
   const { t } = useTranslation()
   const navigate = useNavigate()
+  const { isAuthenticated } = useAuth()
+
+  React.useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/auth/login', { state: { from: window.location.pathname } })
+    }
+  }, [isAuthenticated, navigate])
 
   const handleToolClick = (tool: Tool) => {
-    navigate(`/tools/${tool.id}`)
+    if (isAuthenticated) {
+      navigate(`/tools/${tool.id}`)
+    }
   }
 
   if (loading) {

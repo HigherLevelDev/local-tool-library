@@ -5,14 +5,22 @@ import { Tool, ToolService } from '../../lib/tool.service'
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card'
 import { Button } from '../../components/ui/button'
 import { getThemeClass } from '../../lib/theme'
+import { useAuth } from '../../lib/auth.context'
 
 export function ToolDetailsPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const { t } = useTranslation()
+  const { isAuthenticated } = useAuth()
   const [tool, setTool] = React.useState<Tool | null>(null)
   const [loading, setLoading] = React.useState(true)
   const [error, setError] = React.useState<string | null>(null)
+
+  React.useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/auth/login', { state: { from: window.location.pathname } })
+    }
+  }, [isAuthenticated, navigate])
 
   React.useEffect(() => {
     const fetchTool = async () => {

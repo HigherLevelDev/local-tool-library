@@ -1,0 +1,24 @@
+{
+  "spec": "implement EPIC-01_Local_Tool_Library_POC --> STORY-03_Tool_Search --> TASK-04_Search_Results_And_Navigation baring in mind we might already have done a lot of it",
+  "commitMessage": "feat(frontend): Add auth protection to search results and tool details\n\n- Added auth check and redirect to SearchResults component\n- Added auth check and redirect to ToolDetailsPage\n- Updated task status to done",
+  "stats": {
+    "inputTokens": 62145,
+    "cacheWriteTokens": 10568,
+    "cacheReadTokens": 137384,
+    "outputTokens": 2355,
+    "totalTokens": null,
+    "cost": 0.2269539,
+    "currency": "gbp",
+    "processingMillis": 62961,
+    "git": {
+      "filesChanged": 4,
+      "insertions": 21,
+      "deletions": 12,
+      "linesChanged": 21,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

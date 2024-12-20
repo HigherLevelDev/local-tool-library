@@ -1,9 +1,0 @@
-{
-  "id": "TASK-04_Search_E2E_Tests",
-  "title": "Add Search Feature E2E Tests",
-  "description": "Add end-to-end tests for the tool search feature focusing on happy path scenarios.\n\nChanges needed:\n1. Create search feature E2E test file\n2. Add test utilities if needed\n\nFiles to modify:\n- backend/test/e2e/search.e2e-spec.ts (new)\n- backend/test/utils/test-tools.ts (if needed)\n\nTest scenarios:\n1. Search for existing tool and verify results\n2. Navigate to tool details from search results\n3. Verify empty search results message\n\nTesting requirements:\n- Focus on happy path only\n- Use real API calls (no mocking)\n- Test basic search functionality\n\nFulfills:\n- Verification of all acceptance criteria in E2E context",
-  "assignee": "se-agent",
-  "status": "backlog",
-  "createdAt": "2024-12-20T15:24:40.901Z",
-  "updatedAt": "2024-12-20T15:24:40.901Z"
-}
