@@ -1,0 +1,24 @@
+{
+  "spec": "mark EPIC-01_Local_Tool_Library_POC --> STORY-01_User_Registration_Login --> TASK-05_Auth_E2E_Tests as done",
+  "commitMessage": "Mark TASK-05_Auth_E2E_Tests and STORY-01_User_Registration_Login as done\n\n- Updated TASK-05_Auth_E2E_Tests status to \"done\"\n- Updated STORY-01_User_Registration_Login status to \"done\" as all tasks are complete\n- Updated timestamps for both files",
+  "stats": {
+    "inputTokens": 50173,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 117996,
+    "outputTokens": 3423,
+    "totalTokens": null,
+    "cost": 0.1779471,
+    "currency": "gbp",
+    "processingMillis": 52621,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 4,
+      "deletions": 4,
+      "linesChanged": 4,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
