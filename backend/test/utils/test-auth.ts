@@ -31,7 +31,7 @@ export async function ensureTestUser(client: RestClient, email: string = 'test@e
 
       client.setAuthToken(auth.access_token);
       return {
-        id: existingUser.id,
+        id: auth.user.id,
         email: existingUser.email,
         name: existingUser.name,
         accessToken: auth.access_token
@@ -53,11 +53,12 @@ export async function ensureTestUser(client: RestClient, email: string = 'test@e
     }
 
     client.setAuthToken(auth.access_token);
-    return {
-      id: auth.user_id,
-      email,
-      name: 'Test User',
-      accessToken: auth.access_token
+    const user = auth.user;
+      return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+    accessToken: auth.access_token
     };
   } catch (error) {
     console.error('Error in ensureTestUser:', error);
