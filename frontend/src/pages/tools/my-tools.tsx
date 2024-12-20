@@ -73,7 +73,10 @@ export function MyToolsPage() {
       <div className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className={getThemeClass('components.tools.header')}>{t('tools.list.title')}</h1>
-          <Button onClick={() => navigate('/tools/add')}>
+          <Button 
+            onClick={() => navigate('/tools/add')}
+            className={getThemeClass('components.button.primary')}
+          >
             {t('tools.add.button')}
           </Button>
         </div>

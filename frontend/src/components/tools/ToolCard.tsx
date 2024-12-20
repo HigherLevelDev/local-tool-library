@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
 import { Tool } from '../../lib/tool.service'
+import { getThemeClass } from '../../lib/theme'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -48,13 +49,19 @@ export function ToolCard({ tool, onEdit, onDelete }: ToolCardProps) {
         </div>
       </CardContent>
       <CardFooter className="flex justify-end space-x-2">
-        <Button variant="outline" onClick={() => onEdit(tool)}>
+        <Button 
+          onClick={() => onEdit(tool)}
+          className={getThemeClass('components.button.link')}
+        >
           {t('common.edit')}
         </Button>
         
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button variant="destructive" disabled={isDeleting}>
+            <Button 
+              className="bg-red-600 text-white hover:bg-red-700" 
+              disabled={isDeleting}
+            >
               {isDeleting ? t('common.loading') : t('common.delete')}
             </Button>
           </AlertDialogTrigger>

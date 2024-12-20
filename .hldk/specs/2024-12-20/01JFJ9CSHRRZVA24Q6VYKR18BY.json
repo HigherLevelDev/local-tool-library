@@ -1,0 +1,24 @@
+{
+  "spec": "Update the buttons on the my tools page to match the theme",
+  "commitMessage": "Updated buttons on my tools page to match theme styling:\n- Added theme classes to Add Tool button on my-tools page\n- Updated Edit and Delete buttons in ToolCard to use theme classes\n- Added getThemeClass import to ToolCard component",
+  "stats": {
+    "inputTokens": 24444,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 93231,
+    "outputTokens": 1270,
+    "totalTokens": null,
+    "cost": 0.090263475,
+    "currency": "gbp",
+    "processingMillis": 47311,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 13,
+      "deletions": 3,
+      "linesChanged": 13,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
