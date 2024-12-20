@@ -10,6 +10,8 @@ import { useToast } from 'src/hooks/use-toast'
 interface SignupFormData {
   name: string
   email: string
+  phone: string
+  postcode: string
   password: string
   confirmPassword: string
 }
@@ -24,6 +26,8 @@ export function SignupForm() {
     defaultValues: {
       name: '',
       email: '',
+      phone: '',
+      postcode: '',
       password: '',
       confirmPassword: '',
     },
@@ -39,7 +43,7 @@ export function SignupForm() {
     }
 
     try {
-      await signup(data.name, data.email, data.password)
+      await signup(data.name, data.email, data.password, data.phone, data.postcode)
       toast({
         title: t('auth.success.registration'),
         variant: 'default',
@@ -87,6 +91,49 @@ export function SignupForm() {
               <FormLabel>{t('auth.email')}</FormLabel>
               <FormControl>
                 <Input type="email" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="phone"
+          rules={{
+            required: t('auth.errors.required'),
+            pattern: {
+              value: /^\+?[1-9]\d{1,14}$/,
+              message: t('auth.errors.invalidPhone'),
+            },
+          }}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('auth.phone')}</FormLabel>
+              <FormControl>
+                <Input type="tel" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="postcode"
+          rules={{
+            required: t('auth.errors.required'),
+            pattern: {
+              value: /^[A-Z0-9]{4,10}$/,
+              message: t('auth.errors.invalidPostcode'),
+            },
+          }}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('auth.postcode')}</FormLabel>
+              <FormControl>
+                <Input 
+                  {...field} 
+                  onChange={(e) => field.onChange(e.target.value.toUpperCase())}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -7,7 +7,7 @@ interface AuthContextType {
   loading: boolean
   error: string | null
   login: (email: string, password: string) => Promise<void>
-  signup: (name: string, email: string, password: string) => Promise<void>
+  signup: (name: string, email: string, password: string, phone: string, postcode: string) => Promise<void>
   logout: () => void
   clearError: () => void
 }
@@ -63,11 +63,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  const signup = async (name: string, email: string, password: string) => {
+  const signup = async (name: string, email: string, password: string, phone: string, postcode: string) => {
     try {
       setLoading(true)
       setError(null)
-      const response = await AuthService.signup({ name, email, password })
+      const response = await AuthService.signup({ name, email, password, phone, postcode })
       setIsAuthenticated(true)
       setUser(response.user_id)
     } catch (err) {

@@ -1,0 +1,24 @@
+{
+  "spec": "the registration form is missing phone and postcode fields in the ui",
+  "commitMessage": "Added phone and postcode fields to signup form\n\n- Updated SignupForm component with new fields\n- Updated auth context and service to handle new fields\n- Added validation for phone and postcode fields\n- Updated types and interfaces to include new fields",
+  "stats": {
+    "inputTokens": 59679,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 147495,
+    "outputTokens": 2290,
+    "totalTokens": null,
+    "cost": 0.193226625,
+    "currency": "gbp",
+    "processingMillis": 65290,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 53,
+      "deletions": 4,
+      "linesChanged": 53,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

@@ -15,6 +15,8 @@ interface LoginCredentials {
 
 interface SignupCredentials extends LoginCredentials {
   name: string
+  phone: string
+  postcode: string
 }
 
 interface AuthResponse {
