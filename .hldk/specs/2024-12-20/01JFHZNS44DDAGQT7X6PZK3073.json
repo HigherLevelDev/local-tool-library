@@ -1,0 +1,24 @@
+{
+  "spec": "do EPIC-01_Local_Tool_Library_POC --> STORY-01_User_Registration_Login --> TASK-04_Frontend_Auth_Service",
+  "commitMessage": "Implement frontend authentication service\n\n- Enhanced auth.service.ts with better error handling and token management\n- Added AuthError class for consistent error handling\n- Updated auth.context.tsx with loading and error states\n- Added protected route handling in router.tsx\n- Updated UserMenu component to handle loading states\n- Added proper error handling and type safety improvements\n- All tests passing",
+  "stats": {
+    "inputTokens": 187667,
+    "cacheWriteTokens": 9814,
+    "cacheReadTokens": 274792,
+    "outputTokens": 7139,
+    "totalTokens": null,
+    "cost": 0.591994575,
+    "currency": "gbp",
+    "processingMillis": 147845,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 162,
+      "deletions": 49,
+      "linesChanged": 162,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

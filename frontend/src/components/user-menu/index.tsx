@@ -11,8 +11,14 @@ import {
 import { Avatar, AvatarFallback } from '../ui/avatar'
 
 export function UserMenu() {
-  const { isAuthenticated, user, logout } = useAuth()
+  const { isAuthenticated, user, loading, logout } = useAuth()
   const navigate = useNavigate()
+
+  if (loading) {
+    return (
+      <div className="h-8 w-8 animate-pulse rounded-full bg-gray-200" />
+    )
+  }
 
   if (!isAuthenticated) {
     return (

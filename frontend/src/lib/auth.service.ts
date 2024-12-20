@@ -1,5 +1,12 @@
 import { env } from './env'
 
+export class AuthError extends Error {
+  constructor(message: string, public statusCode?: number) {
+    super(message)
+    this.name = 'AuthError'
+  }
+}
+
 interface LoginCredentials {
   email: string
   password: string
@@ -21,19 +28,33 @@ export class AuthService {
   private static USER_KEY = 'auth_user'
 
   static async login(credentials: LoginCredentials): Promise<AuthResponse> {
-    const response = await fetch(`${env.VITE_API_URL}/api/auth/token`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ...credentials,
-        grant_type: 'password'
-      }),
-    })
+    let response: Response
+    try {
+      response = await fetch(`${env.VITE_API_URL}/api/auth/token`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...credentials,
+          grant_type: 'password'
+        }),
+      })
 
-    if (!response.ok) {
-      throw new Error('Login failed')
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new AuthError(errorData.message || 'Login failed', response.status)
+      }
+
+      const data = await response.json()
+      this.setToken(data.access_token)
+      this.setUser(data.user_id)
+      return data
+    } catch (error) {
+      if (error instanceof AuthError) {
+        throw error
+      }
+      throw new AuthError('Login failed: ' + (error instanceof Error ? error.message : 'Unknown error'))
     }
 
     const data = await response.json()
@@ -44,16 +65,30 @@ export class AuthService {
   }
 
   static async signup(credentials: SignupCredentials): Promise<AuthResponse> {
-    const response = await fetch(`${env.VITE_API_URL}/api/auth/signup`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(credentials),
-    })
+    let response: Response
+    try {
+      response = await fetch(`${env.VITE_API_URL}/api/auth/signup`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials),
+      })
 
-    if (!response.ok) {
-      throw new Error('Signup failed')
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new AuthError(errorData.message || 'Signup failed', response.status)
+      }
+
+      const data = await response.json()
+      this.setToken(data.access_token)
+      this.setUser(data.user_id)
+      return data
+    } catch (error) {
+      if (error instanceof AuthError) {
+        throw error
+      }
+      throw new AuthError('Signup failed: ' + (error instanceof Error ? error.message : 'Unknown error'))
     }
 
     const data = await response.json()
