@@ -102,7 +102,7 @@ export function SignupForm() {
           rules={{
             required: t('auth.errors.required'),
             pattern: {
-              value: /^\+?[1-9]\d{1,14}$/,
+              value: /^(\+44|0044|0)7\d{9}$|^(\+33|0033|0)[67]\d{8}$/,
               message: t('auth.errors.invalidPhone'),
             },
           }}
@@ -110,8 +110,15 @@ export function SignupForm() {
             <FormItem>
               <FormLabel>{t('auth.phone')}</FormLabel>
               <FormControl>
-                <Input type="tel" {...field} />
+                <Input 
+                  type="tel" 
+                  placeholder="+447911123456" 
+                  {...field} 
+                />
               </FormControl>
+              <div className="text-sm text-muted-foreground mt-1">
+                {t('auth.phoneHelper')}
+              </div>
               <FormMessage />
             </FormItem>
           )}

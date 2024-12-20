@@ -14,6 +14,7 @@
     "email": "Email",
     "name": "Name",
     "phone": "Phone Number",
+    "phoneHelper": "Enter a UK (+44) or French (+33) mobile number (e.g. +447911123456 or +33612345678)",
     "postcode": "Postcode",
     "password": "Password",
     "confirmPassword": "Confirm Password",
@@ -26,7 +27,7 @@
     "errors": {
       "required": "This field is required",
       "invalidEmail": "Please enter a valid email address",
-      "invalidPhone": "Please enter a valid phone number",
+      "invalidPhone": "Please enter a valid UK (+44) or French (+33) mobile number",
       "invalidPostcode": "Please enter a valid postcode",
       "passwordMismatch": "Passwords do not match",
       "loginFailed": "Invalid email or password",
