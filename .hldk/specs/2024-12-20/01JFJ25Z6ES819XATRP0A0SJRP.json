@@ -1,0 +1,24 @@
+{
+  "spec": "Update phone number validation to support UK or France phone numbers",
+  "commitMessage": "Updated phone number validation to support UK and French phone numbers\n\n- Updated SignupDto and User entity to validate UK (+44) and French (+33) phone numbers\n- Updated test cases to use valid UK phone number format\n- Added better API documentation examples for phone numbers",
+  "stats": {
+    "inputTokens": 43476,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 88497,
+    "outputTokens": 1380,
+    "totalTokens": null,
+    "cost": 0.133257825,
+    "currency": "gbp",
+    "processingMillis": 47975,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 10,
+      "deletions": 5,
+      "linesChanged": 10,
+      "testFilesChanged": 1,
+      "testInsertions": 1,
+      "testDeletions": 1,
+      "testLinesChanged": 1
+    }
+  }
+}

@@ -46,7 +46,7 @@ describe('AppController (e2e)', () => {
         email,
         name: 'Test User',
         password: 'test1234',
-        phone: '+1234567890',
+        phone: '+447911123456',
         postcode: 'AB12CD'
       });
       expect(signupResponse.status).toBe(201);

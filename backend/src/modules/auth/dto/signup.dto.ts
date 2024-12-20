@@ -33,12 +33,15 @@ export class SignupDto {
   password: string;
 
   @ApiProperty({
-    description: 'The phone number of the user',
-    example: '+1234567890'
+    description: 'The phone number of the user (must be a valid UK or French phone number with country code)',
+    example: '+447911123456',
+    examples: ['+447911123456', '+33612345678']
   })
   @IsString()
   @IsNotEmpty()
-  @Matches(/^\+?[1-9]\d{1,14}$/, { message: 'Invalid phone number format' })
+  @Matches(/^(\+44|0044|0)7\d{9}$|^(\+33|0033|0)[67]\d{8}$/, { 
+    message: 'Phone number must be a valid UK (+44) or French (+33) mobile number' 
+  })
   phone: string;
 
   @ApiProperty({
