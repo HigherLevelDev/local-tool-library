@@ -23,7 +23,7 @@ export default function Home() {
     setIsSearching(true)
     try {
       const response = await ToolService.searchTools(query)
-      setSearchResults(response?.items || [])
+      setSearchResults(response?.tools || [])
     } catch (error) {
       console.error('Search failed:', error)
       setSearchResults([]) // Reset to empty array on error

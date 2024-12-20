@@ -1,0 +1,24 @@
+{
+  "spec": "when I search for tools in the UI I get these results:\n\n{\n    \"tools\": [\n        {\n            \"id\": \"01JFJAJX4E3233S9BBRT99Z07S\",\n            \"title\": \"Hammer\",\n            \"description\": \"Again\",\n            \"imageUrl\": \"https://via.placeholder.com/300x300?text=Tool+Image\",\n            \"ownerId\": \"01JFJ2BQ262S7QNNDP61YJ5RB1\",\n            \"createdAt\": 1734708130958,\n            \"updatedAt\": 1734708211241\n        }\n    ],\n    \"total\": 1\n}\n\nbut I don't see anything in the UI",
+  "commitMessage": "fix: update search results handling to match API response structure\n\n- Updated SearchToolsResponse interface to match actual API response\n- Fixed search results handling in home page to use correct property name",
+  "stats": {
+    "inputTokens": 32770,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 95112,
+    "outputTokens": 985,
+    "totalTokens": null,
+    "cost": 0.10621395,
+    "currency": "gbp",
+    "processingMillis": 28462,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 2,
+      "deletions": 4,
+      "linesChanged": 4,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

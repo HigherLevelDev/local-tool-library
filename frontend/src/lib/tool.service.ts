@@ -29,10 +29,8 @@ export interface UpdateToolDto {
 }
 
 export interface SearchToolsResponse {
-  items: Tool[]
+  tools: Tool[]
   total: number
-  page: number
-  limit: number
 }
 
 export class ToolService {
