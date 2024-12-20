@@ -93,6 +93,7 @@
     "update": "Mettre à jour",
     "delete": "Supprimer",
     "edit": "Modifier",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "api": "Documentation API"
   }
 }

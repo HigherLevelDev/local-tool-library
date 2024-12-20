@@ -93,6 +93,7 @@
     "update": "Update",
     "delete": "Delete",
     "edit": "Edit",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "api": "API Docs"
   }
 }

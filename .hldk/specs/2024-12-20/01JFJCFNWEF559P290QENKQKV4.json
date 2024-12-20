@@ -1,0 +1,24 @@
+{
+  "spec": "add a link to the header in the UI to take us to the swagger ui",
+  "commitMessage": "Added Swagger UI link to header navigation\n\n- Added API docs link to header navigation\n- Added translations for API docs link in English and French\n- Link opens Swagger UI in new tab",
+  "stats": {
+    "inputTokens": 24792,
+    "cacheWriteTokens": 10585,
+    "cacheReadTokens": 74095,
+    "outputTokens": 1277,
+    "totalTokens": null,
+    "cost": 0.1165899375,
+    "currency": "gbp",
+    "processingMillis": 26060,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 12,
+      "deletions": 2,
+      "linesChanged": 12,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

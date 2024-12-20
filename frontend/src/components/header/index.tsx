@@ -35,6 +35,14 @@ export function Header(props: IProps) {
         >
           {t('tools.nav.addTool')}
         </Link>
+        <a 
+          href="/api/docs" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={getThemeClass('components.nav.link')}
+        >
+          {t('common.api')}
+        </a>
       </div>
       <div className="flex items-center gap-4">
         <LanguageSelector />
