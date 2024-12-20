@@ -37,6 +37,7 @@ function PublicOnlyRoute({ children }: PublicOnlyRouteProps) {
 
 // Import tool pages
 import { AddToolPage } from './pages/tools/add-tool'
+import { EditToolPage } from './pages/tools/edit-tool'
 import { MyToolsPage } from './pages/tools/my-tools'
 
 export const routerObjects: RouteObject[] = [
@@ -67,6 +68,10 @@ export const routerObjects: RouteObject[] = [
   {
     path: '/tools/my-tools',
     element: getDefaultLayout(<ProtectedRoute><MyToolsPage /></ProtectedRoute>),
+  },
+  {
+    path: '/tools/edit/:id',
+    element: getDefaultLayout(<ProtectedRoute><EditToolPage /></ProtectedRoute>),
   },
 ]
 

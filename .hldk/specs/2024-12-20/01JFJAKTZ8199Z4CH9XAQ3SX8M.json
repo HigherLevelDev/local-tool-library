@@ -1,0 +1,24 @@
+{
+  "spec": "The edit tool button on mytools seems to go to page that doesn't exist",
+  "commitMessage": "Added edit tool page and route to fix missing edit functionality\n\n- Created new EditToolPage component\n- Added route for /tools/edit/:id\n- Fixed prop name in EditToolPage to match ToolForm component",
+  "stats": {
+    "inputTokens": 40061,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 114356,
+    "outputTokens": 2241,
+    "totalTokens": null,
+    "cost": 0.1410786,
+    "currency": "gbp",
+    "processingMillis": 61748,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 97,
+      "deletions": 0,
+      "linesChanged": 97,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
