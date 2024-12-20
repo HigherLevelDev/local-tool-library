@@ -1,0 +1,24 @@
+{
+  "spec": "[Nest] 19353  - 12/20/2024, 12:44:02 PM   ERROR [ErrorFilter] Error processing request: Validation failed\nBadRequestException: Validation failed\n    at GlobalValidationPipe.transform (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/src/modules/validation/validation.pipe.ts:33:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async resolveParamValue (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:148:23)\n    at async Promise.all (index 0)\n    at async pipesFn (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:151:13)\n    at async /Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:37:30\n\n\n{\n    \"statusCode\": 400,\n    \"timestamp\": \"2024-12-20T12:44:02.369Z\",\n    \"path\": \"/api/auth/signup\",\n    \"method\": \"POST\",\n    \"message\": \"Validation failed\",\n    \"stack\": \"BadRequestException: Validation failed\\n    at GlobalValidationPipe.transform (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/src/modules/validation/validation.pipe.ts:33:13)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async resolveParamValue (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:148:23)\\n    at async Promise.all (index 0)\\n    at async pipesFn (/Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:151:13)\\n    at async /Users/adam/dev/higherleveldev/ops-root/local-tool-library/backend/node_modules/.pnpm/@nestjs+core@10.4.15_@nestjs+common@10.4.15_class-transformer@0.5.1_class-validator@0.14.1_re_d3isqskvgxfv552ewapjkdxmvq/node_modules/@nestjs/core/router/router-execution-context.js:37:30\"\n}\n\nNeed to add logging to understand what's failing when signing up\n\nPayload was:\n\n{name: \"Joe Bloggs\", email: \"joe@foo.com\", password: \"M30wM30w\"}",
+  "commitMessage": "Enhanced validation pipe logging to provide more detailed error information\n\n- Added AppLogger integration to ValidationPipe\n- Added detailed logging of incoming data and validation errors\n- Added logging of expected vs received fields\n- Added success logging for valid requests",
+  "stats": {
+    "inputTokens": 13362,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 49165,
+    "outputTokens": 1411,
+    "totalTokens": null,
+    "cost": 0.057000375000000006,
+    "currency": "gbp",
+    "processingMillis": 23885,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 24,
+      "deletions": 0,
+      "linesChanged": 24,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
