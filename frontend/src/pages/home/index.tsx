@@ -23,9 +23,10 @@ export default function Home() {
     setIsSearching(true)
     try {
       const response = await ToolService.searchTools(query)
-      setSearchResults(response.items)
+      setSearchResults(response?.items || [])
     } catch (error) {
       console.error('Search failed:', error)
+      setSearchResults([]) // Reset to empty array on error
       // TODO: Add error toast
     } finally {
       setIsSearching(false)
@@ -41,13 +42,17 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center gap-8">
           <SearchBar onSearch={handleSearch} />
-          {searchResults.length > 0 && (
+          {isSearching ? (
+            <div className="flex justify-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+            </div>
+          ) : searchResults.length > 0 ? (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {searchResults.map((tool) => (
                 <SearchResultCard key={tool.id} tool={tool} />
               ))}
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </>

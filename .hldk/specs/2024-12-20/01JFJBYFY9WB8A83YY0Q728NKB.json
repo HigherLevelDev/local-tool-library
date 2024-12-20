@@ -1,0 +1,24 @@
+{
+  "spec": "index.tsx:44 Uncaught TypeError: Cannot read properties of undefined (reading 'length')\n    at Home (index.tsx:44:26)\n\ni18next.js?v=1f80bec1:215 i18next::backendConnector: loaded namespace notfound for language en \n{oops: 'Oops!', title: 'Sorry, an unexpected error has occurred.', backtohomepage: 'Back to home page'}\nindex.tsx:44 Uncaught TypeError: Cannot read properties of undefined (reading 'length')\n    at Home (index.tsx:44:26)\nindex.tsx:44 Uncaught TypeError: Cannot read properties of undefined (reading 'length')\n    at Home (index.tsx:44:26)\nchunk-Z4APPW6Q.js?v=1f80bec1:14052 The above error occurred in the <Home> component:\n\n    at Home (http://localhost:5001/src/pages/home/index.tsx?t=1734709484796:28:45)\n    at ProtectedRoute (http://localhost:5001/src/router.tsx?t=1734708723853:25:3)\n    at main\n    at div\n    at RenderedRoute (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:4084:5)\n    at RenderErrorBoundary (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:4044:5)\n    at DataRoutes (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:5239:5)\n    at Router (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:4498:15)\n    at RouterProvider (http://localhost:5001/node_modules/.vite/deps/react-router-dom.js?v=1f80bec1:5053:5)\n    at AuthProvider (http://localhost:5001/src/lib/auth.context.tsx:21:3)\n    at QueryClientProvider (http://localhost:5001/node_modules/.vite/deps/chunk-T7YKUEBR.js?v=1f80bec1:2789:3)\n    at App (http://localhost:5001/src/App.tsx?t=1734708723853:26:23)\n\nReact will try to recreate this component tree from scratch using the error boundary you provided, RenderErrorBoundary.\nreact-router-dom.js?v=1f80bec1:4071 React Router caught the following error during render TypeError: Cannot read properties of undefined (reading 'length')\n    at Home (index.tsx:44:26)\n \n{componentStack: '\\n    at Home (http://localhost:5001/src/pages/home…localhost:5001/src/App.tsx?t=1734708723853:26:23)'}",
+  "commitMessage": "Fix undefined searchResults error in Home component and add loading state\n\n- Added null check for search results and fallback to empty array\n- Reset search results to empty array on error\n- Added loading spinner during search\n- Improved error handling in search function",
+  "stats": {
+    "inputTokens": 13314,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 52840,
+    "outputTokens": 1073,
+    "totalTokens": null,
+    "cost": 0.05391675,
+    "currency": "gbp",
+    "processingMillis": 22869,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 8,
+      "deletions": 3,
+      "linesChanged": 8,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
