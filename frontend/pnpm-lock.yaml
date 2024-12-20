@@ -101,6 +101,9 @@ importers:
       '@transmart/cli':
         specifier: ^0.2.4
         version: 0.2.4(@types/node@18.19.68)(typescript@5.7.2)
+      '@types/lodash':
+        specifier: ^4.17.13
+        version: 4.17.13
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -128,6 +131,9 @@ importers:
       input-otp:
         specifier: ^1.4.1
         version: 1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       lucide-react:
         specifier: ^0.277.0
         version: 0.277.0(react@18.3.1)
@@ -1647,6 +1653,9 @@ packages:
 
   '@types/loadable__component@5.13.9':
     resolution: {integrity: sha512-QWOtIkwZqHNdQj3nixQ8oyihQiTMKZLk/DNuvNxMSbTfxf47w+kqcbnxlUeBgAxdOtW0Dh48dTAIp83iJKtnrQ==}
+
+  '@types/lodash@4.17.13':
+    resolution: {integrity: sha512-lfx+dftrEZcdBPczf9d0Qv0x+j/rfNCMuC6OcfXmO8gkfeNAY88PgKUbvG56whcN23gc27yenwF6oJZXGFpYxg==}
 
   '@types/minimatch@5.1.2':
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
@@ -5840,6 +5849,8 @@ snapshots:
   '@types/loadable__component@5.13.9':
     dependencies:
       '@types/react': 18.3.17
+
+  '@types/lodash@4.17.13': {}
 
   '@types/minimatch@5.1.2': {}
 

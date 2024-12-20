@@ -11,23 +11,26 @@ import { SearchResultCard } from 'src/components/tools/SearchResultCard'
 export default function Home() {
   const [searchResults, setSearchResults] = useState<Tool[]>([])
   const [isSearching, setIsSearching] = useState(false)
+  const [hasSearched, setHasSearched] = useState(false)
   const { t } = useTranslation('translation')
   const { isAuthenticated } = useAuth()
   const navigate = useNavigate()
 
-  // Only show login prompt when trying to access protected features
-  useEffect(() => {
-    // Initial load of featured or recent tools could go here
-  }, [])
   const handleSearch = async (query: string) => {
+    if (!query.trim()) {
+      setSearchResults([])
+      setHasSearched(false)
+      return
+    }
+    
     setIsSearching(true)
     try {
       const response = await ToolService.searchTools(query)
       setSearchResults(response?.tools || [])
+      setHasSearched(true)
     } catch (error) {
       console.error('Search failed:', error)
-      setSearchResults([]) // Reset to empty array on error
-      // TODO: Add error toast
+      setSearchResults([])
     } finally {
       setIsSearching(false)
     }
@@ -42,17 +45,22 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center gap-8">
           <SearchBar onSearch={handleSearch} />
-          {isSearching ? (
-            <div className="flex justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-            </div>
-          ) : searchResults.length > 0 ? (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {searchResults.map((tool) => (
-                <SearchResultCard key={tool.id} tool={tool} />
-              ))}
-            </div>
-          ) : null}
+          
+          <div className="w-full">
+            {hasSearched && !isSearching && searchResults.length === 0 && (
+              <div className="text-center py-8">
+                <p className="text-gray-500">{t('tools.search.noResults')}</p>
+              </div>
+            )}
+            
+            {searchResults.length > 0 && (
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {searchResults.map((tool) => (
+                  <SearchResultCard key={tool.id} tool={tool} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

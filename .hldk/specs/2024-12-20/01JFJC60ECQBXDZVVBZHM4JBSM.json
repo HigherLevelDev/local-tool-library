@@ -1,0 +1,24 @@
+{
+  "spec": "Update the search results page to automatically update - so remove the search button\nalso indicate if no results found",
+  "commitMessage": "feat: Implement auto-search and improve no results handling\n\n- Remove search button from SearchBar component\n- Add debounced search functionality\n- Improve search results display with proper loading and no results states\n- Add lodash dependency for debounce functionality",
+  "stats": {
+    "inputTokens": 33709,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 95112,
+    "outputTokens": 3106,
+    "totalTokens": null,
+    "cost": 0.13218795,
+    "currency": "gbp",
+    "processingMillis": 71828,
+    "git": {
+      "filesChanged": 4,
+      "insertions": 69,
+      "deletions": 40,
+      "linesChanged": 69,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

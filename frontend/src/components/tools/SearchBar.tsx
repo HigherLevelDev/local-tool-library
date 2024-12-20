@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from 'src/lib/auth.context'
 import { Input } from 'src/components/ui/input'
-import { Button } from 'src/components/ui/button'
 import { Loader2 } from 'lucide-react'
+import debounce from 'lodash/debounce'
 
 interface SearchBarProps {
   onSearch: (query: string) => Promise<void>
@@ -15,36 +15,44 @@ export function SearchBar({ onSearch }: SearchBarProps) {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!query.trim()) return
+  // Debounce the search to avoid too many API calls
+  const debouncedSearch = useCallback(
+    debounce(async (searchQuery: string) => {
+      if (!searchQuery.trim()) {
+        await onSearch('')
+        return
+      }
+      setIsSearching(true)
+      try {
+        await onSearch(searchQuery.trim())
+      } finally {
+        setIsSearching(false)
+      }
+    }, 300),
+    [onSearch]
+  )
 
-    setIsSearching(true)
-    try {
-      await onSearch(query.trim())
-    } finally {
-      setIsSearching(false)
+  useEffect(() => {
+    debouncedSearch(query)
+    return () => {
+      debouncedSearch.cancel()
     }
-  }
-
-  // Show search bar for all users
+  }, [query, debouncedSearch])
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-lg gap-2">
+    <div className="relative flex w-full max-w-lg">
       <Input
         type="search"
         placeholder={t('tools.search.placeholder')}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="flex-1"
+        className="flex-1 pr-10"
       />
-      <Button type="submit" disabled={isSearching || !query.trim()}>
-        {isSearching ? (
-          <Loader2 className="h-4 w-4 animate-spin" />
-        ) : (
-          t('tools.search.button')
-        )}
-      </Button>
-    </form>
+      {isSearching && (
+        <div className="absolute right-3 top-1/2 -translate-y-1/2">
+          <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
+        </div>
+      )}
+    </div>
   )
 }
