@@ -1,0 +1,17 @@
+{
+  "id": "STORY-01_User_Registration_Login",
+  "title": "User Registration and Authentication",
+  "description": "As a new user, I want to register for the tool library and login securely so that I can access the platform",
+  "status": "backlog",
+  "createdAt": "2024-12-20T11:49:23.033Z",
+  "updatedAt": "2024-12-20T11:49:23.033Z",
+  "acceptanceCriteria": [
+    "AC01: Given a new user, when they visit the registration page, they should see a form requesting email, phone, postcode, and password",
+    "AC02: Given a registration form, when all required fields are filled correctly, then the user account should be created and they should be logged in automatically",
+    "AC03: Given invalid registration data, when submitted, then appropriate error messages should be displayed",
+    "AC04: Given a registered user, when they visit the login page, they should see a form requesting email and password",
+    "AC05: Given valid login credentials, when submitted, then the user should be logged in and receive an OAuth token",
+    "AC06: Given invalid login credentials, when submitted, then an appropriate error message should be displayed",
+    "AC07: Given a logged-in user, when they click logout, then they should be logged out and the token invalidated"
+  ]
+}

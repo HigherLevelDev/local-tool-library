@@ -1,0 +1,24 @@
+{
+  "spec": "Create the stories for the POC",
+  "commitMessage": "Added user stories for Local Tool Library POC",
+  "stats": {
+    "inputTokens": 35351,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 14595,
+    "outputTokens": 2484,
+    "totalTokens": null,
+    "cost": 0.11076862500000001,
+    "currency": "gbp",
+    "processingMillis": 43653,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 80,
+      "deletions": 0,
+      "linesChanged": 80,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

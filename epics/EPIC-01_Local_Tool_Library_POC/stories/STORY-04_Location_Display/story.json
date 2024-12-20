@@ -1,0 +1,15 @@
+{
+  "id": "STORY-04_Location_Display",
+  "title": "Tool Location Display",
+  "description": "As a user, I want to see the approximate location of a tool on a map so that I can determine if it's convenient to borrow",
+  "status": "backlog",
+  "createdAt": "2024-12-20T11:49:23.033Z",
+  "updatedAt": "2024-12-20T11:49:23.033Z",
+  "acceptanceCriteria": [
+    "AC01: Given a tool's detail page, when loaded, then a map should be displayed showing the approximate tool location",
+    "AC02: Given a tool owner's postcode, when displaying location, then only the approximate area should be shown for privacy",
+    "AC03: Given a map display, when viewing on mobile, then the map should be properly sized and interactive",
+    "AC04: Given an invalid postcode, when displaying location, then an appropriate error message should be shown",
+    "AC05: Given a tool location, when displaying the map, then an appropriate zoom level should be set to show the neighborhood area"
+  ]
+}

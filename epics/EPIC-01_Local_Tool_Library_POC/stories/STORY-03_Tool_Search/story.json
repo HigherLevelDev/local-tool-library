@@ -1,0 +1,16 @@
+{
+  "id": "STORY-03_Tool_Search",
+  "title": "Tool Search and Discovery",
+  "description": "As a user, I want to search for available tools by keyword so that I can find the tools I need",
+  "status": "backlog",
+  "createdAt": "2024-12-20T11:49:23.033Z",
+  "updatedAt": "2024-12-20T11:49:23.033Z",
+  "acceptanceCriteria": [
+    "AC01: Given any user on the homepage, when they view the search bar, they should be able to enter keywords",
+    "AC02: Given a search query, when submitted, then matching tools should be displayed with their images and basic details",
+    "AC03: Given search results, when displayed, then they should be sorted by relevance to the search term",
+    "AC04: Given a mobile user, when viewing search results, then the layout should be responsive and usable",
+    "AC05: Given no search results, when a search is performed, then an appropriate 'no results' message should be displayed",
+    "AC06: Given search results, when a user clicks on a tool, then they should see the full tool details"
+  ]
+}
