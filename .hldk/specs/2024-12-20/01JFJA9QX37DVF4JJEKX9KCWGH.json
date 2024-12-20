@@ -1,0 +1,24 @@
+{
+  "spec": "remove story 5 also",
+  "commitMessage": "Update requirements and remove API documentation story",
+  "stats": {
+    "inputTokens": 26395,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 36584,
+    "outputTokens": 1289,
+    "totalTokens": null,
+    "cost": 0.0821214,
+    "currency": "gbp",
+    "processingMillis": 25632,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 2,
+      "deletions": 19,
+      "linesChanged": 19,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

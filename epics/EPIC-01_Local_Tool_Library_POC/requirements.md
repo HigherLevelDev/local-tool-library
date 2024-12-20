@@ -7,13 +7,11 @@ A simple web application that enables neighbors to share tools within their comm
 - Create a basic platform for neighborhood tool sharing
 - Enable simple tool registration with automated image finding
 - Provide basic search functionality
-- Deliver a functional API with basic documentation
 
 ## Success Criteria
 - Users can register with email, phone, and postcode
 - Users can add tools with automated image assignment
 - Users can search for tools by title/description
-- API is documented with Swagger
 - Basic authentication is implemented and secure
 
 ## Technical Requirements
@@ -25,7 +23,6 @@ A simple web application that enables neighbors to share tools within their comm
 
 ### API Requirements
 - RESTful API design
-- Basic Swagger documentation
 - Standard error responses
 
 ### User Management
@@ -78,3 +75,4 @@ A simple web application that enables neighbors to share tools within their comm
 - Social media integration
 - Location mapping
 - Distance calculations
+- API documentation
