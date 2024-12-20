@@ -1,0 +1,24 @@
+{
+  "spec": "Update the epic and stories to remove the location aspects of the project. The user has a postcode set when signing up... that's all we need. No longitude/lat or maps etc",
+  "commitMessage": "Update requirements for Local Tool Library POC",
+  "stats": {
+    "inputTokens": 31493,
+    "cacheWriteTokens": 9146,
+    "cacheReadTokens": 82314,
+    "outputTokens": 2921,
+    "totalTokens": null,
+    "cost": 0.147964275,
+    "currency": "gbp",
+    "processingMillis": 51822,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 5,
+      "deletions": 26,
+      "linesChanged": 26,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

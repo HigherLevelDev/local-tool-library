@@ -8,7 +8,7 @@
   "acceptanceCriteria": [
     "AC01: Given a logged-in user, when they access the 'Add Tool' page, they should see a form requesting tool title and description",
     "AC02: Given a tool title, when a tool is being created, then an appropriate image should be automatically fetched and associated",
-    "AC03: Given a tool submission, when all required fields are filled, then the tool should be created and associated with the user's location",
+    "AC03: Given a tool submission, when all required fields are filled, then the tool should be created and saved",
     "AC04: Given a tool owner, when they view their tools, they should see a list of all their registered tools",
     "AC05: Given a tool owner viewing their tool, when they click edit, they should be able to modify the tool's title and description",
     "AC06: Given a tool owner viewing their tool, when they click delete, they should be asked to confirm before the tool is removed",

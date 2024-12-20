@@ -1,20 +1,18 @@
 # Local Tool Library POC
 
 ## Description
-A simple web application that enables neighbors to share tools within their community. Users can register tools they're willing to share and search for tools they need to borrow. The platform provides basic tool discovery and location information while keeping personal information private.
+A simple web application that enables neighbors to share tools within their community. Users can register tools they're willing to share and search for tools they need to borrow. The platform provides basic tool discovery while keeping personal information private.
 
 ## Goals
 - Create a basic platform for neighborhood tool sharing
 - Enable simple tool registration with automated image finding
 - Provide basic search functionality
-- Show approximate tool locations on a map
 - Deliver a functional API with basic documentation
 
 ## Success Criteria
 - Users can register with email, phone, and postcode
 - Users can add tools with automated image assignment
 - Users can search for tools by title/description
-- Tool locations are displayed on a map
 - API is documented with Swagger
 - Basic authentication is implemented and secure
 
@@ -43,18 +41,12 @@ A simple web application that enables neighbors to share tools within their comm
   * Title
   * Description
   * Automated image URL (based on title)
-  * Location (from owner's postcode)
 - Basic tool editing and deletion
 
 ### Search & Discovery
 - Simple text search on tool title and description
 - Basic results display
 - Mobile-responsive results page
-
-### Location Services
-- Basic postcode to coordinate conversion
-- Simple map display of tool location
-- Approximate location display for privacy
 
 ### Image Management
 - Basic web image search integration
@@ -84,3 +76,5 @@ A simple web application that enables neighbors to share tools within their comm
 - Tool delivery logistics
 - Phone verification
 - Social media integration
+- Location mapping
+- Distance calculations
