@@ -35,6 +35,10 @@ function PublicOnlyRoute({ children }: PublicOnlyRouteProps) {
   return <>{children}</>
 }
 
+// Import tool pages
+import { AddToolPage } from './pages/tools/add-tool'
+import { MyToolsPage } from './pages/tools/my-tools'
+
 export const routerObjects: RouteObject[] = [
   {
     path: '/',
@@ -55,6 +59,14 @@ export const routerObjects: RouteObject[] = [
   {
     path: '/auth/signup',
     element: getDefaultLayout(<PublicOnlyRoute><SignupPage /></PublicOnlyRoute>),
+  },
+  {
+    path: '/tools/add',
+    element: getDefaultLayout(<ProtectedRoute><AddToolPage /></ProtectedRoute>),
+  },
+  {
+    path: '/tools/my',
+    element: getDefaultLayout(<ProtectedRoute><MyToolsPage /></ProtectedRoute>),
   },
 ]
 

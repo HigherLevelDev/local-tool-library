@@ -37,5 +37,53 @@
       "registration": "Registration successful! Welcome to Local Tool Library.",
       "login": "Welcome back!"
     }
+  },
+  "tools": {
+    "add": {
+      "title": "Add New Tool",
+      "button": "Add Tool",
+      "success": "Tool Added",
+      "successDescription": "Your tool has been added successfully",
+      "error": "Error Adding Tool",
+      "errorDescription": "There was a problem adding your tool. Please try again."
+    },
+    "edit": {
+      "title": "Edit Tool",
+      "success": "Tool Updated",
+      "successDescription": "Your tool has been updated successfully",
+      "error": "Error Updating Tool",
+      "errorDescription": "There was a problem updating your tool. Please try again."
+    },
+    "delete": {
+      "title": "Delete Tool",
+      "description": "Are you sure you want to delete this tool? This action cannot be undone.",
+      "success": "Tool Deleted",
+      "successDescription": "Your tool has been deleted successfully",
+      "error": "Error Deleting Tool",
+      "errorDescription": "There was a problem deleting your tool. Please try again."
+    },
+    "list": {
+      "title": "My Tools",
+      "empty": "You haven't added any tools yet",
+      "error": "Error Loading Tools",
+      "errorDescription": "There was a problem loading your tools. Please try again."
+    },
+    "form": {
+      "title": "Tool Name",
+      "description": "Description",
+      "latitude": "Latitude",
+      "longitude": "Longitude"
+    },
+    "card": {
+      "location": "Location"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "edit": "Edit",
+    "cancel": "Cancel"
   }
 }
