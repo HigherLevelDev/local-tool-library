@@ -1,0 +1,11 @@
+{
+  "id": "TASK-02_Backend_Auth_Controllers",
+  "title": "Implement authentication API endpoints",
+  "description": "Create the REST API endpoints for user registration, login, and logout.\n\nChanges needed:\n1. Create registration endpoint with validation\n2. Create login endpoint with token generation\n3. Create logout endpoint\n4. Add Swagger documentation\n5. Implement proper error responses\n\nFiles to modify:\n- backend/src/modules/auth/controllers/auth.controller.ts\n- backend/src/modules/auth/dto/signup.dto.ts\n- backend/src/modules/auth/dto/token.dto.ts\n\nTesting Requirements:\n1. E2E test for successful registration\n2. E2E test for successful login\n3. E2E test for logout\n4. Test invalid input handling",
+  "assignee": "se-agent",
+  "status": "backlog",
+  "createdAt": "2024-12-20T11:52:04.240Z",
+  "updatedAt": "2024-12-20T11:52:04.240Z",
+  "dependencies": ["TASK-01_Backend_Auth_Setup"],
+  "acceptanceCriteria": ["AC02", "AC03", "AC05", "AC06", "AC07"]
+}

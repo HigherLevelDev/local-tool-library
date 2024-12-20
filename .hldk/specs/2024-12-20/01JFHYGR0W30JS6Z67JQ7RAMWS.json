@@ -1,0 +1,24 @@
+{
+  "spec": "create the tasks for EPIC-01_Local_Tool_Library_POC --> STORY-01_User_Registration_Login",
+  "commitMessage": "Added authentication features and translations to the frontend and backend.",
+  "stats": {
+    "inputTokens": 75746,
+    "cacheWriteTokens": 8332,
+    "cacheReadTokens": 116648,
+    "outputTokens": 4773,
+    "totalTokens": null,
+    "cost": 0.2738043,
+    "currency": "gbp",
+    "processingMillis": 93464,
+    "git": {
+      "filesChanged": 8,
+      "insertions": 106,
+      "deletions": 11,
+      "linesChanged": 106,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

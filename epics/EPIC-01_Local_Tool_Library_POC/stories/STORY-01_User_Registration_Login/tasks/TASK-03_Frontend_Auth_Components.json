@@ -1,0 +1,10 @@
+{
+  "id": "TASK-03_Frontend_Auth_Components",
+  "title": "Create frontend authentication components",
+  "description": "Implement the frontend components for registration and login forms.\n\nChanges needed:\n1. Create registration form component with validation\n2. Create login form component\n3. Add form validation using existing UI components\n4. Add i18n support for all text\n5. Implement responsive design\n\nFiles to modify:\n- frontend/src/pages/auth/login.tsx\n- frontend/src/pages/auth/signup.tsx\n- frontend/src/components/auth/LoginForm.tsx\n- frontend/src/components/auth/SignupForm.tsx\n\nTesting Requirements:\n1. Test form validation for all fields\n2. Test responsive design on mobile and desktop\n3. Verify all text is translated\n4. Test form submission handling",
+  "assignee": "se-agent",
+  "status": "backlog",
+  "createdAt": "2024-12-20T11:52:04.240Z",
+  "updatedAt": "2024-12-20T11:52:04.240Z",
+  "acceptanceCriteria": ["AC01", "AC03", "AC04", "AC06"]
+}

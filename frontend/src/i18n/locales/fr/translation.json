@@ -6,5 +6,30 @@
   "i18nsupport": "Facile à Utiliser",
   "i18nsupport-desc": "Plateforme simple pour trouver, emprunter et prêter des outils dans votre région",
   "hero-title": "Bienvenue à la Bibliothèque d'Outils Locale",
-  "get-started": "Commencer"
+  "get-started": "Commencer",
+  "auth": {
+    "login": "Connexion",
+    "register": "Inscription",
+    "logout": "Déconnexion",
+    "email": "Email",
+    "phone": "Numéro de téléphone",
+    "postcode": "Code postal",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "loginButton": "Se connecter",
+    "registerButton": "Créer un compte",
+    "errors": {
+      "required": "Ce champ est obligatoire",
+      "invalidEmail": "Veuillez entrer une adresse email valide",
+      "invalidPhone": "Veuillez entrer un numéro de téléphone valide",
+      "invalidPostcode": "Veuillez entrer un code postal valide",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "loginFailed": "Email ou mot de passe invalide",
+      "registrationFailed": "L'inscription a échoué. Veuillez réessayer."
+    },
+    "success": {
+      "registration": "Inscription réussie ! Bienvenue à la Bibliothèque d'Outils Locale.",
+      "login": "Bon retour parmi nous !"
+    }
+  }
 }

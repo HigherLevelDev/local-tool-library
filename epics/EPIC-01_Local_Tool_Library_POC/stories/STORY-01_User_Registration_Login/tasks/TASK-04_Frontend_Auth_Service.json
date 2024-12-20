@@ -1,0 +1,11 @@
+{
+  "id": "TASK-04_Frontend_Auth_Service",
+  "title": "Implement frontend authentication service",
+  "description": "Create the frontend authentication service to handle API calls and token management.\n\nChanges needed:\n1. Create auth service with API integration\n2. Implement token storage and management\n3. Add auth context for global state\n4. Add protected route handling\n5. Implement logout functionality\n\nFiles to modify:\n- frontend/src/lib/auth.service.ts\n- frontend/src/lib/auth.context.tsx\n- frontend/src/components/user-menu/index.tsx\n- frontend/src/router.tsx\n\nTesting Requirements:\n1. Test token storage and retrieval\n2. Test protected route redirection\n3. Test logout flow\n4. Verify auth state persistence",
+  "assignee": "se-agent",
+  "status": "backlog",
+  "createdAt": "2024-12-20T11:52:04.240Z",
+  "updatedAt": "2024-12-20T11:52:04.240Z",
+  "dependencies": ["TASK-02_Backend_Auth_Controllers", "TASK-03_Frontend_Auth_Components"],
+  "acceptanceCriteria": ["AC02", "AC05", "AC07"]
+}

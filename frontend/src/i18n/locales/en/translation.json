@@ -6,5 +6,30 @@
   "i18nsupport": "Easy to Use",
   "i18nsupport-desc": "Simple platform to find, borrow, and lend tools in your local area",
   "hero-title": "Welcome to Local Tool Library",
-  "get-started": "Get Started"
+  "get-started": "Get Started",
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "phone": "Phone Number",
+    "postcode": "Postcode",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "invalidPhone": "Please enter a valid phone number",
+      "invalidPostcode": "Please enter a valid postcode",
+      "passwordMismatch": "Passwords do not match",
+      "loginFailed": "Invalid email or password",
+      "registrationFailed": "Registration failed. Please try again."
+    },
+    "success": {
+      "registration": "Registration successful! Welcome to Local Tool Library.",
+      "login": "Welcome back!"
+    }
+  }
 }
