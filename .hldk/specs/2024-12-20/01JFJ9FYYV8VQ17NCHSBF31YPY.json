@@ -1,0 +1,24 @@
+{
+  "spec": "change the text on the create button on the add tool page to be \"Add Tool\"",
+  "commitMessage": "Updated add tool button text to \"Add Tool\" instead of \"Create\"",
+  "stats": {
+    "inputTokens": 12107,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 62154,
+    "outputTokens": 658,
+    "totalTokens": null,
+    "cost": 0.0486279,
+    "currency": "gbp",
+    "processingMillis": 33247,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 1,
+      "deletions": 1,
+      "linesChanged": 1,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

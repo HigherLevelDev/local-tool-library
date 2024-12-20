@@ -77,7 +77,7 @@ export function ToolForm({ tool, onSubmit, isLoading }: ToolFormProps) {
               disabled={isLoading}
               className={getThemeClass('components.button.primary')}
             >
-              {isLoading ? t('common.loading') : tool ? t('common.update') : t('common.create')}
+              {isLoading ? t('common.loading') : tool ? t('common.update') : t('tools.add.button')}
             </Button>
           </form>
         </Form>
