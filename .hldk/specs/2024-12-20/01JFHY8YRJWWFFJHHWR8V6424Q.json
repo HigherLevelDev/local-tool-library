@@ -1,0 +1,24 @@
+{
+  "spec": "Help me flesh out the requirements for a new POC in this repo - Local Tool Library\nThis is a web/mobile web app that allows neighbours to share their tools\nEach user should sign up by providing their email, phone number and postcode\nAll comms is done outside the platform so no need to verify phone number etc\nEach user can add their tools into the library and we should use a web based image search to add a picture to make the UI nicer\nEach tool should have a title, description, imageUrl (use the title to find a suitable image)\nOffer a search mechanism to search on title/description and show nice results\nClicking into a tool should show the owners rough location on a map\nThe API should be a first class citizen with swagger docs etc\nUse standard oauth style auth (password grant is fine)",
+  "commitMessage": "Added EPIC-01 Local Tool Library POC requirements documentation",
+  "stats": {
+    "inputTokens": 1544,
+    "cacheWriteTokens": 2085,
+    "cacheReadTokens": 2085,
+    "outputTokens": 1060,
+    "totalTokens": null,
+    "cost": 0.0217321875,
+    "currency": "gbp",
+    "processingMillis": 21196,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 110,
+      "deletions": 0,
+      "linesChanged": 110,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
